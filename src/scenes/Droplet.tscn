@@ -1,19 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://csnpb2qlcovl0"]
+[gd_scene load_steps=5 format=3 uid="uid://csnpb2qlcovl0"]
 
-[ext_resource type="Texture2D" uid="uid://djnv5ceu3dfqq" path="res://src/assets/water-drop.svg" id="1_mfrhe"]
 [ext_resource type="Script" path="res://src/scripts/Droplet.gd" id="1_p7h4r"]
+[ext_resource type="Texture2D" uid="uid://d1h7exjguydch" path="res://src/assets/waterMinigame/raindrop.png" id="2_4itri"]
+[ext_resource type="Texture2D" uid="uid://c54svb046egwr" path="res://src/assets/waterMinigame/burst_raindrop.png" id="3_4m6tt"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i7j3m"]
-radius = 337.0
-height = 816.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0uevp"]
+radius = 310.0
+height = 880.0
 
 [node name="Droplet" type="CharacterBody2D"]
 script = ExtResource("1_p7h4r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
 scale = Vector2(0.1, 0.1)
-shape = SubResource("CapsuleShape2D_i7j3m")
+shape = SubResource("CapsuleShape2D_0uevp")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_mfrhe")
+position = Vector2(-1, -0.999998)
+scale = Vector2(1.25, 1.06)
+texture = ExtResource("2_4itri")
+
+[node name="Popped" type="Sprite2D" parent="."]
+texture = ExtResource("3_4m6tt")
