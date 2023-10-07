@@ -6,6 +6,7 @@ extends Node
 # It is not the standard timer.
 # Your shit will break.
 var timer = 0
+var TIMER_FINISH = $Timer.get_meta("TimerDuration")
 
 # This is redundant, if you leave immediately after.
 var timerToggle = false
@@ -17,23 +18,22 @@ func _ready():
 	$Instructions.show()
 	$BlackoutScreen.show()
 	$Countdown.hide()
+	$Score.hide()
 	$Timer.value = 0
 
 # Update timer, stop when done.
 func _process(delta):
 	if(timerToggle):
-		timer += delta * 100 / $Timer.get_meta("TimerDuration")
+		timer += delta * 100 / TIMER_FINISH
 		$Timer.value = timer
 		if($Timer.value == 100):
 			timerToggle = false
-			# REPLACE THIS WITH A CALL TO ANY FINISH FUNC
-			print("DONE OMG")
+			_endGame()
 	
 func _startGame():
 	$ConfirmButton.hide()
 	$Instructions.hide()
 	$BlackoutScreen.hide()
-	print("Start game")
 	_countdown()
 	
 func _countdown():
@@ -48,3 +48,15 @@ func _countdown():
 	await get_tree().create_timer(0.75).timeout
 	$Countdown.hide()
 	timerToggle = true
+	
+func _endGame():
+	$BlackoutScreen.show()
+	$Score.text = "Score:\n" + str(self.get_meta("Score"))
+	$Score.show()
+	$ConfirmButton.pressed.disconnect(_startGame)
+	$ConfirmButton.pressed.connect(_crash)
+	$ConfirmButton.show()
+	
+	
+func _crash():
+	print("IMPLEMENT GOING BACK TO DIALOG NOW DOOFUS")
