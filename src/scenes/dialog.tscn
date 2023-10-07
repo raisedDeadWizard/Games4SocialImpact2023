@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bukacenm7lh83"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="DialogText" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 800.0
+offset_right = 1491.0
+offset_bottom = 1058.0
+theme_override_font_sizes/font_size = 60
+text = "Do you want to have a bad time? Words are chriping, birds are singing. On days like these, kids like you? Should be burning in hell."
+autowrap_mode = 3
+
+[node name="DialogName" type="Label" parent="."]
+offset_left = 34.0
+offset_top = 716.0
+offset_right = 355.0
+offset_bottom = 796.0
+theme_override_font_sizes/font_size = 50
+text = "Sans"
+
+[node name="Options" type="Node" parent="."]
+
+[node name="Button1" type="Button" parent="Options"]
+offset_left = 1600.0
+offset_top = 820.0
+offset_right = 1888.0
+offset_bottom = 924.0
+theme_override_font_sizes/font_size = 60
+text = "Yay"
+
+[node name="Button2" type="Button" parent="Options"]
+offset_left = 1600.0
+offset_top = 950.0
+offset_right = 1888.0
+offset_bottom = 1054.0
+theme_override_font_sizes/font_size = 60
+text = "Nay
+"
