@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://6fauhbkjpeoa"]
+[gd_scene load_steps=4 format=3 uid="uid://6fauhbkjpeoa"]
+
+[ext_resource type="PackedScene" uid="uid://csnpb2qlcovl0" path="res://src/scenes/Droplet.tscn" id="1_512ks"]
+[ext_resource type="PackedScene" uid="uid://camhh28plki7b" path="res://src/scenes/Garden.tscn" id="1_x1pq3"]
+[ext_resource type="Script" path="res://src/scenes/Garden.gd" id="2_22m1e"]
 
 [node name="main" type="Node"]
+
+[node name="Garden" parent="." instance=ExtResource("1_x1pq3")]
+script = ExtResource("2_22m1e")
+
+[node name="Droplet" parent="." instance=ExtResource("1_512ks")]
+position = Vector2(0, -497)
+
+[node name="Camera2D" type="Camera2D" parent="."]

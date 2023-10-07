@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=3 uid="uid://camhh28plki7b"]
+
+[ext_resource type="Texture2D" uid="uid://dxtewven3e8wg" path="res://src/assets/maple_leaf.png" id="1_55tcn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qr33a"]
+radius = 550.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ac14a"]
+radius = 550.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_opegf"]
+radius = 550.0
+
+[node name="Garden" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+
+[node name="Left Track" type="Sprite2D" parent="Background"]
+
+[node name="Area2D" type="Area2D" parent="Background/Left Track"]
+
+[node name="Left Leaf" type="Sprite2D" parent="Background/Left Track/Area2D"]
+position = Vector2(-190, 200)
+rotation = -1.5708
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_55tcn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Left Track/Area2D"]
+position = Vector2(-190, 200)
+rotation = -1.5708
+scale = Vector2(0.1, 0.1)
+shape = SubResource("CircleShape2D_qr33a")
+
+[node name="Center Track" type="Sprite2D" parent="Background"]
+
+[node name="Area2D" type="Area2D" parent="Background/Center Track"]
+
+[node name="Center Leaf" type="Sprite2D" parent="Background/Center Track/Area2D"]
+position = Vector2(2.08165e-12, 200)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_55tcn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Center Track/Area2D"]
+position = Vector2(2.08165e-12, 200)
+scale = Vector2(0.1, 0.1)
+shape = SubResource("CircleShape2D_ac14a")
+
+[node name="Right Track" type="Sprite2D" parent="Background"]
+
+[node name="Area2D" type="Area2D" parent="Background/Right Track"]
+
+[node name="Right Leaf" type="Sprite2D" parent="Background/Right Track/Area2D"]
+position = Vector2(190, 200)
+rotation = 1.5708
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_55tcn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Right Track/Area2D"]
+position = Vector2(190, 200)
+rotation = 1.5708
+scale = Vector2(0.1, 0.1)
+shape = SubResource("CircleShape2D_opegf")
+
+[node name="Camera2D" type="Camera2D" parent="Background"]
