@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://7i2bec0i4yxx"]
+
+[ext_resource type="Texture2D" uid="uid://cuf67ex75ua1r" path="res://src/assets/bottom2.png" id="1_rdlwl"]
+[ext_resource type="Script" path="res://src/scripts/book_stack.gd" id="1_tani2"]
+[ext_resource type="Texture2D" uid="uid://cwg4vl1bqw8js" path="res://src/assets/bottom.png" id="2_ca6gp"]
+[ext_resource type="Script" path="res://src/scripts/stackable_book.gd" id="3_jufvo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxqyw"]
+size = Vector2(720, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2gqi"]
+size = Vector2(126.5, 60.5)
+
+[node name="book_stack" type="Node2D"]
+script = ExtResource("1_tani2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(578, 320)
+
+[node name="Bottom2" type="Sprite2D" parent="."]
+position = Vector2(585, 462)
+texture = ExtResource("1_rdlwl")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Bottom2"]
+position = Vector2(-595, -462)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom2/StaticBody2D"]
+position = Vector2(599, 467)
+shape = SubResource("RectangleShape2D_qxqyw")
+
+[node name="pickable" type="Node" parent="."]
+
+[node name="stackable_book" type="RigidBody2D" parent="pickable" groups=["pickable"]]
+position = Vector2(500, 2.08165e-12)
+mass = 20.0
+script = ExtResource("3_jufvo")
+
+[node name="Bottom" type="Sprite2D" parent="pickable/stackable_book"]
+position = Vector2(-1.23999, 2)
+texture = ExtResource("2_ca6gp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pickable/stackable_book"]
+position = Vector2(-3.23999, 4)
+shape = SubResource("RectangleShape2D_s2gqi")
