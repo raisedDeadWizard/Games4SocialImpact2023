@@ -7,6 +7,8 @@ var currNumOfDroplets = 0
 var timer = 0
 var lastSpawned = 0
 var offset = 0
+var totalScore = 0
+var scoreIncrement = 10
 
 var rng = RandomNumberGenerator.new()
 var dropletNode = preload("res://src/scenes/Droplet.tscn")
@@ -19,8 +21,19 @@ func _ready():
 func _process(delta):
 	timer += delta
 	_spawnDroplet(delta)
-	_checkPlayerInput()
-
+	
+	
+func _unhandled_input(event):
+	if event is InputEventKey:
+		var dir
+		if event.pressed and event.keycode == KEY_LEFT:
+			dir = "l"
+		if event.pressed and event.keycode == KEY_UP:
+			dir = "c"
+		if event.pressed and event.keycode == KEY_RIGHT:
+			dir = "r"
+		if dir:
+			_checkPlayerInput(dir)
 	
 func _spawnDroplet(delta):
 		if currNumOfDroplets < numOfDroplets:
@@ -28,14 +41,10 @@ func _spawnDroplet(delta):
 			if timeElapsed >= offset:
 				var r = rng.randi_range(1, 3)
 				if r == 1:
-					print("Left Droplet Spawned") # spawn here
-					
 					_emitDroplet(-190)
 				if r == 2:
-					print("Center Droplet Spawned")
 					_emitDroplet(0)
 				if r == 3:
-					print("Right Droplet Spawned")
 					_emitDroplet(190)
 				currNumOfDroplets += 1
 				lastSpawned = timer
@@ -48,28 +57,32 @@ func _emitDroplet(dir):
 	dropletNode_instance.position.y = -500
 	
 
-func _checkPlayerInput():
-	# get player input
-	# check if it is r-arrow, u-arrow, or l-arrow
+func _checkPlayerInput(dir):
+	
 	var rec
 	var hit
-	
-	if Input.is_action_pressed("ui_left"):
-		print("Left pressed")
+
+	if dir == "l":
 		rec = $Background/Left/Receiver
-		hit = rec.has_overlapping_bodies()
+		hit = rec.get_overlapping_bodies()
 		
-	if Input.is_action_pressed("ui_up"):
-		print("Center pressed")
+	if dir == "c":
 		rec = $Background/Center/Receiver
-		hit = rec.has_overlapping_bodies()
+		hit = rec.get_overlapping_bodies()
 		
-	if Input.is_action_pressed("ui_right"):
-		print("Right pressed")
+	if dir == "r":
 		rec = $Background/Right/Receiver
-		hit = rec.has_overlapping_bodies()
+		hit = rec.get_overlapping_bodies()
 	
 	if hit:
-		print("Successful Hit!")
+		var i = hit.find(dropletNode)
+		var drop = hit[i]
+		drop.hide()
+		_addScore()
+		print("Current Score: ", totalScore)
+		
+func _addScore():
+	totalScore += scoreIncrement
+	
 	
 		
