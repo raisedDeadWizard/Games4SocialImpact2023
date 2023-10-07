@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://6fauhbkjpeoa"]
+
+[ext_resource type="Script" path="res://src/scripts/book.gd" id="1_7fx2w"]
+[ext_resource type="Texture2D" uid="uid://cv8jmad3be4t3" path="res://src/assets/book/book.png" id="2_kk7sr"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_7fx2w")
+
+[node name="Book" type="Sprite2D" parent="."]
+position = Vector2(962, 535)
+texture = ExtResource("2_kk7sr")
+
+[node name="Label1" type="Label" parent="."]
+offset_left = 350.0
+offset_top = 275.0
+offset_right = 950.0
+offset_bottom = 875.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Test Text"
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 980.0
+offset_top = 275.0
+offset_right = 1580.0
+offset_bottom = 875.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Test Text"
+autowrap_mode = 3
+
+[node name="LeftButton" type="Button" parent="."]
+offset_left = 29.0
+offset_top = 931.0
+offset_right = 149.0
+offset_bottom = 1051.0
+theme_override_font_sizes/font_size = 70
+action_mode = 0
+text = "<-"
+
+[node name="RightButton" type="Button" parent="."]
+offset_left = 1778.0
+offset_top = 940.0
+offset_right = 1898.0
+offset_bottom = 1060.0
+theme_override_font_sizes/font_size = 70
+action_mode = 0
+text = "->"
