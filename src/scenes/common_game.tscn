@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bb8bnvlds1j3f"]
+[gd_scene load_steps=3 format=3 uid="uid://dt4n1uac0dvtv"]
 
 [ext_resource type="Script" path="res://src/scripts/CommonGame.gd" id="1_ije7b"]
 [ext_resource type="Texture2D" uid="uid://ceemib0mxflm7" path="res://src/assets/blackout.png" id="2_poix2"]
