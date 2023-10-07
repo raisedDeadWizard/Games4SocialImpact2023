@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://bdxc218f8wk0c"]
+
+[ext_resource type="Script" path="res://src/scripts/WeedGameCore.gd" id="1_4v3x6"]
+[ext_resource type="Texture2D" uid="uid://d4eus3hd42fpf" path="res://src/assets/gardenMinigame/garden_topView.png" id="3_ospfc"]
+[ext_resource type="PackedScene" uid="uid://bb8bnvlds1j3f" path="res://src/scenes/common_game.tscn" id="3_si1m5"]
+[ext_resource type="Texture2D" uid="uid://btoxuknde31tu" path="res://src/assets/gardenMinigame/CABBAGE.png" id="3_urcl1"]
+[ext_resource type="Texture2D" uid="uid://ce3ijgg5ov3yy" path="res://src/assets/gardenMinigame/green-glove.png" id="4_784a6"]
+[ext_resource type="Texture2D" uid="uid://bu7ogq8fpyf74" path="res://src/assets/gardenMinigame/yellow-glove.png" id="5_wpff3"]
+[ext_resource type="Texture2D" uid="uid://dpgt8il8gpphm" path="res://src/assets/gardenMinigame/red-glove.png" id="6_x3mgb"]
+
+[node name="WeedGame" type="Node2D"]
+script = ExtResource("1_4v3x6")
+
+[node name="GardenTopView" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(960, 540)
+texture = ExtResource("3_ospfc")
+
+[node name="Weeds" type="Node" parent="."]
+
+[node name="Button" type="Button" parent="Weeds"]
+offset_left = 219.0
+offset_top = 247.0
+offset_right = 379.0
+offset_bottom = 397.0
+action_mode = 0
+icon = ExtResource("3_urcl1")
+flat = true
+
+[node name="SelectedTool" type="Node" parent="."]
+
+[node name="Green" type="Sprite2D" parent="SelectedTool"]
+position = Vector2(710, 950)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_784a6")
+
+[node name="Yellow" type="Sprite2D" parent="SelectedTool"]
+position = Vector2(960, 950)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_wpff3")
+
+[node name="Red" type="Sprite2D" parent="SelectedTool"]
+position = Vector2(1210, 950)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("6_x3mgb")
+
+[node name="CommonGame" parent="." instance=ExtResource("3_si1m5")]
+
+[node name="Timer" parent="CommonGame" index="1"]
+metadata/TimerDuration = 45
+
+[editable path="CommonGame"]

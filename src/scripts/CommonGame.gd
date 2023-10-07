@@ -49,6 +49,9 @@ func _countdown():
 	await get_tree().create_timer(0.75).timeout
 	$Countdown.hide()
 	timerToggle = true
+	set_meta("Toggle", timerToggle)
+	
+	
 	
 func _endGame():
 	$BlackoutScreen.show()

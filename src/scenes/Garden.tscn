@@ -1,6 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://camhh28plki7b"]
+[gd_scene load_steps=9 format=3 uid="uid://camhh28plki7b"]
 
-[ext_resource type="Texture2D" uid="uid://dxtewven3e8wg" path="res://src/assets/maple_leaf.png" id="1_55tcn"]
+[ext_resource type="Texture2D" uid="uid://bkhnp8qmpnj6s" path="res://src/assets/background/baseBackground.png" id="1_gwxse"]
+[ext_resource type="Script" path="res://src/scripts/Garden.gd" id="1_tgxat"]
+[ext_resource type="Texture2D" uid="uid://g6v5bl58mv1y" path="res://src/assets/waterMinigame/plant.png" id="2_j55nu"]
+[ext_resource type="PackedScene" uid="uid://2v6mkonjqyk3" path="res://src/scenes/common_game.tscn" id="4_fvj5b"]
 
 [sub_resource type="GDScript" id="GDScript_dq0o0"]
 script/source = "extends Area2D
@@ -18,69 +21,61 @@ func _process(delta):
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qr33a"]
-radius = 550.0
+radius = 430.465
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ac14a"]
-radius = 550.0
+radius = 320.156
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_opegf"]
-radius = 550.0
+radius = 401.996
 
 [node name="Garden" type="Node2D"]
+position = Vector2(960, 540)
+script = ExtResource("1_tgxat")
 
 [node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_gwxse")
+
+[node name="Plant" type="Sprite2D" parent="Background"]
+position = Vector2(13.125, 382.781)
+scale = Vector2(0.628001, 1.05146)
+texture = ExtResource("2_j55nu")
 
 [node name="Left" type="Sprite2D" parent="Background"]
 
 [node name="Receiver" type="Area2D" parent="Background/Left"]
 script = SubResource("GDScript_dq0o0")
 
-[node name="LeafSprite" type="Sprite2D" parent="Background/Left/Receiver"]
-position = Vector2(-190, 200)
-rotation = -1.5708
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_55tcn")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Left/Receiver"]
-position = Vector2(-190, 200)
+position = Vector2(-423, 392)
 rotation = -1.5708
 scale = Vector2(0.1, 0.1)
 shape = SubResource("CircleShape2D_qr33a")
-
-[node name="Emitter" type="Node2D" parent="Background/Left"]
 
 [node name="Center" type="Sprite2D" parent="Background"]
 
 [node name="Receiver" type="Area2D" parent="Background/Center"]
 
-[node name="LeafSprite" type="Sprite2D" parent="Background/Center/Receiver"]
-position = Vector2(2.08165e-12, 200)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_55tcn")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Center/Receiver"]
-position = Vector2(2.08165e-12, 200)
+position = Vector2(-37, 293)
 scale = Vector2(0.1, 0.1)
 shape = SubResource("CircleShape2D_ac14a")
-
-[node name="Emitter" type="Node2D" parent="Background/Center"]
 
 [node name="Right" type="Sprite2D" parent="Background"]
 
 [node name="Receiver" type="Area2D" parent="Background/Right"]
 
-[node name="LeafSprite" type="Sprite2D" parent="Background/Right/Receiver"]
-position = Vector2(190, 200)
-rotation = 1.5708
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_55tcn")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Right/Receiver"]
-position = Vector2(190, 200)
+position = Vector2(432, 387)
 rotation = 1.5708
 scale = Vector2(0.1, 0.1)
 shape = SubResource("CircleShape2D_opegf")
 
-[node name="Emitter" type="Node2D" parent="Background/Right"]
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Camera2D" type="Camera2D" parent="Background"]
+[node name="CommonGame" parent="." instance=ExtResource("4_fvj5b")]
+
+[node name="Timer" parent="CommonGame" index="1"]
+metadata/TimerDuration = 30
+
+[editable path="CommonGame"]
