@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ooqeyhiqo252"
-path="res://.godot/imported/garden_topView.png-7e37ac9b6ff71f4bc989e34abbc1e9b2.ctex"
+uid="uid://cfl3u11lqxxoq"
+path="res://.godot/imported/books1.png-4dd8a554c7b512875a456590ca9a3574.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/gardenMinigame/garden_topView.png"
-dest_files=["res://.godot/imported/garden_topView.png-7e37ac9b6ff71f4bc989e34abbc1e9b2.ctex"]
+source_file="res://src/assets/bookMinigame/books1.png"
+dest_files=["res://.godot/imported/books1.png-4dd8a554c7b512875a456590ca9a3574.ctex"]
 
 [params]
 
