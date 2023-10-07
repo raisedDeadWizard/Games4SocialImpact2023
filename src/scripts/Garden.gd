@@ -1,7 +1,7 @@
 extends Node2D
 
 
-const numOfDroplets = 10
+const numOfDroplets = 25
 var currNumOfDroplets = 0
 
 var maxTime = 30
@@ -10,14 +10,14 @@ var lastSpawned = 0
 var offset = 0
 var totalScore = 0
 var scoreIncrement = 10
+var nextSpawn = 0
 
 var rng = RandomNumberGenerator.new()
 var dropletNode = preload("res://src/scenes/Droplet.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	timer = 0 # Replace with function body.
-	offset = 2
-	$CommonGame/Timer.set_meta("TimerDuration", maxTime)
+	offset = 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -40,9 +40,9 @@ func _unhandled_input(event):
 	
 func _spawnDroplet(delta):
 	if currNumOfDroplets < numOfDroplets:
-		var timeElapsed = timer - lastSpawned
-		if timeElapsed >= offset:
+		if timer >= nextSpawn:
 			var r = rng.randi_range(1, 3)
+			var rOffset = rng.randf_range(0.5,1.5)
 			if r == 1:
 				_emitDroplet(-423)
 			if r == 2:
@@ -50,12 +50,14 @@ func _spawnDroplet(delta):
 			if r == 3:
 				_emitDroplet(432)
 			currNumOfDroplets += 1
-			lastSpawned = timer
+			nextSpawn = timer + rOffset
 	
 	
 func _emitDroplet(dir):
 	var dropletNode_instance = dropletNode.instantiate()
 	$Background.add_child(dropletNode_instance)
+	var popped = dropletNode_instance.get_child(2)
+	popped.set_visibility_layer_bit(0, false)
 	dropletNode_instance.position.x = dir
 	dropletNode_instance.position.y = -500
 	
@@ -80,7 +82,15 @@ func _checkPlayerInput(dir):
 	if hit:
 		var i = hit.find(dropletNode)
 		var drop = hit[i]
-		drop.hide()
+		var children = drop.get_children()
+		var sprite = children[1]
+		var popped = children[2]
+		
+		sprite.set_visibility_layer_bit(0, false)
+		popped.set_visibility_layer_bit(1, true)
+		# fade opacity of popped
+		
+		#drop.hide()
 		_addScore()
 		
 		

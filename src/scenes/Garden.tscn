@@ -21,13 +21,13 @@ func _process(delta):
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qr33a"]
-radius = 550.0
+radius = 430.465
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ac14a"]
-radius = 550.0
+radius = 320.156
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_opegf"]
-radius = 550.0
+radius = 401.996
 
 [node name="Garden" type="Node2D"]
 position = Vector2(960, 540)
