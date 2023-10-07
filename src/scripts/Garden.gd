@@ -4,6 +4,7 @@ extends Node2D
 const numOfDroplets = 10
 var currNumOfDroplets = 0
 
+var maxTime = 30
 var timer = 0
 var lastSpawned = 0
 var offset = 0
@@ -16,11 +17,13 @@ var dropletNode = preload("res://src/scenes/Droplet.tscn")
 func _ready():
 	timer = 0 # Replace with function body.
 	offset = 2
+	$CommonGame/Timer.set_meta("TimerDuration", maxTime)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	timer += delta
-	_spawnDroplet(delta)
+	if $CommonGame.get_meta("Toggle"):
+		timer += delta
+		_spawnDroplet(delta)
 	
 	
 func _unhandled_input(event):
@@ -36,18 +39,18 @@ func _unhandled_input(event):
 			_checkPlayerInput(dir)
 	
 func _spawnDroplet(delta):
-		if currNumOfDroplets < numOfDroplets:
-			var timeElapsed = timer - lastSpawned
-			if timeElapsed >= offset:
-				var r = rng.randi_range(1, 3)
-				if r == 1:
-					_emitDroplet(-190)
-				if r == 2:
-					_emitDroplet(0)
-				if r == 3:
-					_emitDroplet(190)
-				currNumOfDroplets += 1
-				lastSpawned = timer
+	if currNumOfDroplets < numOfDroplets:
+		var timeElapsed = timer - lastSpawned
+		if timeElapsed >= offset:
+			var r = rng.randi_range(1, 3)
+			if r == 1:
+				_emitDroplet(-423)
+			if r == 2:
+				_emitDroplet(-37)
+			if r == 3:
+				_emitDroplet(432)
+			currNumOfDroplets += 1
+			lastSpawned = timer
 	
 	
 func _emitDroplet(dir):
@@ -79,10 +82,11 @@ func _checkPlayerInput(dir):
 		var drop = hit[i]
 		drop.hide()
 		_addScore()
-		print("Current Score: ", totalScore)
+		
 		
 func _addScore():
-	totalScore += scoreIncrement
-	
+	var s = $CommonGame.get_meta("Score")
+	s += scoreIncrement
+	$CommonGame.set_meta("Score", s)
 	
 		
