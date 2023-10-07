@@ -4,10 +4,24 @@ signal clicked
 
 var held = false
 var collisionNode = null
+var spriteNode = null
 var object_rect = null
 
+var sprites : Array = []
+var heights : Array = [80,40]
+
 func _ready():
-	collisionNode = get_node("CollisionShape2D")
+	collisionNode = get_node("book_collision")
+	spriteNode = get_node("book_sprite")
+	
+	sprites.append(load("res://src/assets/bookMinigame/book1blue.png"))
+	sprites.append(load("res://src/assets/bookMinigame/book2green.png"))
+	sprites.append(load("res://src/assets/bookMinigame/book3red.png"))
+	sprites.append(load("res://src/assets/bookMinigame/book4blue.png"))
+	
+	spriteNode.texture = sprites[1]
+	collisionNode.set_shape(Rect2(collisionNode.position,Vector2(330,heights[1])))
+	
 	
 
 func _input(event):

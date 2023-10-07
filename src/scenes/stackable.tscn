@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b888d7nglq4s5"]
+
+[ext_resource type="Script" path="res://src/scripts/stackable_book.gd" id="1_1wq1q"]
+[ext_resource type="Texture2D" uid="uid://2cscqbghfvvi" path="res://src/assets/bookMinigame/book1blue.png" id="2_xgokg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8qcef"]
+size = Vector2(330, 80)
+
+[node name="stackable_book" type="RigidBody2D" groups=["pickable"]]
+position = Vector2(500, 2.08165e-12)
+script = ExtResource("1_1wq1q")
+
+[node name="book_sprite" type="Sprite2D" parent="."]
+position = Vector2(-1.23999, 2)
+texture = ExtResource("2_xgokg")
+
+[node name="book_collision" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 3.5)
+shape = SubResource("RectangleShape2D_8qcef")
