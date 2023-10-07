@@ -6,7 +6,7 @@ extends Node
 # It is not the standard timer.
 # Your shit will break.
 var timer = 0
-var TIMER_FINISH = $Timer.get_meta("TimerDuration")
+var TIMER_FINISH = 0
 
 # This is redundant, if you leave immediately after.
 var timerToggle = false
@@ -20,6 +20,7 @@ func _ready():
 	$Countdown.hide()
 	$Score.hide()
 	$Timer.value = 0
+	TIMER_FINISH = $Timer.get_meta("TimerDuration")
 
 # Update timer, stop when done.
 func _process(delta):
