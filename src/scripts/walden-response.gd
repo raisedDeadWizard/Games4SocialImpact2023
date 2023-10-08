@@ -44,6 +44,6 @@ func _nextDialog():
 	if queue_ind % 2 == 1:
 		$Background/textbox/Label2.text = "You"
 	else:
-		$Background/textbox/Label2.text = "Gilbert"
+		$Background/textbox/Label2.text = "Walden"
 	$Background/textbox/Label.text = text_queue[queue_ind]
 	

@@ -152,7 +152,9 @@ var scene_array : Array = [
 	"res://src/scenes/act3/vivian-prompt.tscn",
 	"res://src/scenes/book_stack.tscn",
 	"res://src/scenes/act3/vivian-research.tscn",
-	"res://src/scenes/act3/vivian-response.tscn"
+	"res://src/scenes/act3/vivian-response.tscn",
+	
+	"res://src/scenes/TheEnd.tscn"
 ]
 var scene_index = -1
 
