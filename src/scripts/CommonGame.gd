@@ -13,6 +13,7 @@ var timerToggle = false
 
 # Set timer to 0.
 func _ready():
+	Global.is_minigame_ready = false
 	$ConfirmButton.pressed.connect(_startGame)
 	$ConfirmButton.show()
 	$Instructions.show()
@@ -46,6 +47,7 @@ func _countdown():
 	$Countdown.text = "1"
 	await get_tree().create_timer(0.75).timeout
 	$Countdown.text = "GO!"
+	Global.is_minigame_ready = true
 	await get_tree().create_timer(0.75).timeout
 	$Countdown.hide()
 	timerToggle = true
@@ -54,6 +56,7 @@ func _countdown():
 	
 	
 func _endGame():
+	Global.is_minigame_ready = false
 	$BlackoutScreen.show()
 	$Score.text = "Score:\n" + str(self.get_meta("Score"))
 	$Score.show()
