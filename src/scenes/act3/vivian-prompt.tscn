@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdi7gl36wl5r8"]
+
+[ext_resource type="Script" path="res://src/scripts/vivian-prompt.gd" id="1_5cju1"]
+
+[node name="vivian-prompt" type="Node2D"]
+script = ExtResource("1_5cju1")
+
+[node name="Camera2D" type="Camera2D" parent="."]

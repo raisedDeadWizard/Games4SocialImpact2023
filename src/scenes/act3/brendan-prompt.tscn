@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ps2qpopm8qhn"]
+
+[ext_resource type="Script" path="res://src/scripts/brendan-prompt.gd" id="1_nvcio"]
+
+[node name="brendan-prompt" type="Node2D"]
+script = ExtResource("1_nvcio")
+
+[node name="Camera2D" type="Camera2D" parent="."]

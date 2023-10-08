@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccjte72wm7hba"]
+
+[ext_resource type="Script" path="res://src/scripts/judith-prompt.gd" id="1_08xfc"]
+
+[node name="judith-prompt" type="Node2D"]
+script = ExtResource("1_08xfc")
+
+[node name="Camera2D" type="Camera2D" parent="."]

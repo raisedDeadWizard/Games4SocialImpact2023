@@ -1,6 +1,7 @@
 extends Node2D
 
-var eumann = preload("res://src/scenes/characters/pre-industrial/eumann/eumann_char.tscn")
+
+var character = preload("res://src/scenes/characters/pre-industrial/eumann/eumann_char.tscn")
 var town = preload("res://src/scenes/pre-industry.tscn")
 var bkgd = preload("res://src/scenes/Background.tscn")
 var tree = preload("res://src/scenes/Tree.tscn")
@@ -9,14 +10,17 @@ var tree = preload("res://src/scenes/Tree.tscn")
 func _ready():
 	var treeNode = tree.instantiate()
 	treeNode.set_meta("Health", 1)
-	var bkgdNode = bkgd.instantiate()
+	var bkgdNode = bkgd.instantiate(1)
 	var townNode = town.instantiate()
-	var eumannNode = eumann.instantiate()
+	var charNode = character.instantiate()
 	
 	bkgdNode.add_child(townNode)
 	bkgdNode.add_child(treeNode)
-	bkgdNode.add_child(eumannNode)
+	bkgdNode.add_child(charNode)
 	add_child(bkgdNode)
+	
+	
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
