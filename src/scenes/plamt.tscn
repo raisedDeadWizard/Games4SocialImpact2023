@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://djhf3br65j81p"]
+
+[ext_resource type="Texture2D" uid="uid://dqovq6tg8fx78" path="res://src/assets/gardenMinigame/dyingPlant.png" id="1_p4qca"]
+[ext_resource type="Script" path="res://src/scripts/PlantScript.gd" id="2_ggm6l"]
+
+[node name="Plamt" type="Button"]
+offset_left = 209.0
+offset_top = 150.0
+offset_right = 509.0
+offset_bottom = 450.0
+scale = Vector2(0.6, 0.6)
+action_mode = 0
+icon = ExtResource("1_p4qca")
+flat = true
+icon_alignment = 1
+script = ExtResource("2_ggm6l")

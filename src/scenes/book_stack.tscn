@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cuf67ex75ua1r" path="res://src/assets/bottom2.png" id="1_rdlwl"]
 [ext_resource type="Script" path="res://src/scripts/book_stack.gd" id="1_tani2"]
 [ext_resource type="Texture2D" uid="uid://ckfwin18sepgn" path="res://src/assets/bookMinigame/bookshelfBackground.png" id="2_2fys1"]
-[ext_resource type="PackedScene" uid="uid://dt4n1uac0dvtv" path="res://src/scenes/common_game.tscn" id="2_aw2no"]
+[ext_resource type="PackedScene" uid="uid://2v6mkonjqyk3" path="res://src/scenes/common_game.tscn" id="2_aw2no"]
 [ext_resource type="PackedScene" uid="uid://b888d7nglq4s5" path="res://src/scenes/stackable.tscn" id="4_76j7v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxqyw"]

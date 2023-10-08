@@ -1,10 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://6fauhbkjpeoa"]
 
-
-[gd_scene load_steps=3 format=3 uid="uid://6fauhbkjpeoa"]
-
-
-
-[ext_resource type="PackedScene" uid="uid://7i2bec0i4yxx" path="res://src/scenes/book_stack.tscn" id="1_84tv0"]
 [ext_resource type="Script" path="res://src/scripts/main.gd" id="1_wv2ts"]
 [ext_resource type="PackedScene" uid="uid://kn16grtsmdqd" path="res://src/scenes/StartMenu.tscn" id="2_wt44d"]
 
