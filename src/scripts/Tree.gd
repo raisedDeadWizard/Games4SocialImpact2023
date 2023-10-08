@@ -3,13 +3,21 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var health = get_meta("Health")
-	if health == 0:
-		$Wilting.hide()
-	if health == 1:
-		$Healthy.hide()
-
+	_updateHealth()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+	
+func _updateHealth():
+	var health = get_meta("Health")
+	$Wilting.hide()
+	$Healthy.hide()
+	$Dying.hide()
+	match health:
+		0:
+			$Healthy.show()
+		1:
+			$Wilting.show()
+		2:
+			$Dying.show()
