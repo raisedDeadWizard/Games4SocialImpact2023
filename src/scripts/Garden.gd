@@ -4,7 +4,7 @@ extends Node2D
 var numOfDroplets = Global.max_drops
 var currNumOfDroplets = 0
 
-var maxTime = 30
+var maxTime = Global.water_timer
 var timer = 0
 var lastSpawned = 0
 var offset = 0
@@ -20,6 +20,8 @@ var dropletNode = preload("res://src/scenes/Droplet.tscn")
 func _ready():
 	timer = 0 # Replace with function body.
 	offset = 1
+	print(maxTime)
+	print(numOfDroplets)
 
 	
 
