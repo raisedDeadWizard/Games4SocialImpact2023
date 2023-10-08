@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvnm1lns8j8fa"]
+
+[ext_resource type="Texture2D" uid="uid://ceemib0mxflm7" path="res://src/assets/blackout.png" id="1_etgkq"]
+[ext_resource type="Texture2D" uid="uid://dkp2kfe1iywnd" path="res://src/assets/background/deadTree.png" id="2_27ik8"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Blackout" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(192, 108)
+texture = ExtResource("1_etgkq")
+
+[node name="DeadTree" type="Sprite2D" parent="."]
+position = Vector2(963, 536)
+texture = ExtResource("2_27ik8")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 529.0
+offset_top = 384.0
+offset_right = 1463.0
+offset_bottom = 804.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 100
+text = "The Tree of Life
+has withered away,
+thus so have you."
+horizontal_alignment = 1

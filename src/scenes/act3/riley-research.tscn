@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/scripts/riley-research.gd" id="1_b5m2a"]
 [ext_resource type="Texture2D" uid="uid://bkhnp8qmpnj6s" path="res://src/assets/background/baseBackground.png" id="2_dpgh7"]
-[ext_resource type="Texture2D" uid="uid://c8p8spxbby0g4" path="res://src/assets/background/healthyTree.png" id="3_nm6hm"]
+[ext_resource type="PackedScene" uid="uid://bhoorcr64nkl7" path="res://src/scenes/Tree.tscn" id="3_lusga"]
 
 [node name="PlayerExpo6" type="Node2D"]
 script = ExtResource("1_b5m2a")
@@ -11,5 +11,4 @@ script = ExtResource("1_b5m2a")
 position = Vector2(960, 540)
 texture = ExtResource("2_dpgh7")
 
-[node name="Tree" type="Sprite2D" parent="Background"]
-texture = ExtResource("3_nm6hm")
+[node name="Tree" parent="Background" instance=ExtResource("3_lusga")]

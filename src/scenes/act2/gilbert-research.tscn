@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/scripts/gilbert-research.gd" id="1_yvie8"]
 [ext_resource type="Texture2D" uid="uid://bkhnp8qmpnj6s" path="res://src/assets/background/baseBackground.png" id="2_i76vd"]
-[ext_resource type="Texture2D" uid="uid://c8p8spxbby0g4" path="res://src/assets/background/healthyTree.png" id="3_hp0od"]
+[ext_resource type="PackedScene" uid="uid://bhoorcr64nkl7" path="res://src/scenes/Tree.tscn" id="3_t6wlb"]
 
 [node name="PlayerExpo5" type="Node2D"]
 script = ExtResource("1_yvie8")
@@ -11,5 +11,4 @@ script = ExtResource("1_yvie8")
 position = Vector2(960, 540)
 texture = ExtResource("2_i76vd")
 
-[node name="Tree" type="Sprite2D" parent="Background"]
-texture = ExtResource("3_hp0od")
+[node name="Tree" parent="Background" instance=ExtResource("3_t6wlb")]
