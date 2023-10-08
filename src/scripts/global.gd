@@ -31,9 +31,41 @@ var scene_array : Array = [
 	"res://src/scenes/act1/walden-prompt.tscn",
 	"res://src/scenes/book_stack.tscn",
 	"res://src/scenes/act1/walden-research.tscn",
-	"res://src/scenes/act1/walden-response.tscn"
+	"res://src/scenes/act1/walden-response.tscn",
 	
 	# act 2
+	
+	"res://src/scenes/act2/harold-prompt.tscn",
+	"res://src/scenes/Garden.tscn",
+	"res://src/scenes/act2/harold-research.tscn",
+	"res://src/scenes/act2/harold-response.tscn",
+	
+	"res://src/scenes/act2/gilbert-prompt.tscn",
+	"res://src/scenes/Weed.tscn",
+	"res://src/scenes/act2/gilbert-research.tscn",
+	"res://src/scenes/act2/gilbert-response.tscn",
+	
+	"res://src/scenes/act2/judith-prompt.tscn",
+	"res://src/scenes/book_stack.tscn",
+	"res://src/scenes/act2/judith-research.tscn",
+	"res://src/scenes/act2/judith-response.tscn",
+	
+	# act 3
+	
+	"res://src/scenes/act3/riley-prompt.tscn",
+	"res://src/scenes/Garden.tscn",
+	"res://src/scenes/act3/riley-research.tscn",
+	"res://src/scenes/act3/riley-response.tscn",
+	
+	"res://src/scenes/act3/brendan-prompt.tscn",
+	"res://src/scenes/Weed.tscn",
+	"res://src/scenes/act3/brendan-research.tscn",
+	"res://src/scenes/act3/brendan-response.tscn",
+	
+	"res://src/scenes/act3/vivian-prompt.tscn",
+	"res://src/scenes/book_stack.tscn",
+	"res://src/scenes/act3/vivian-research.tscn",
+	"res://src/scenes/act3/vivian-response.tscn"
 ]
 var scene_index = -1
 

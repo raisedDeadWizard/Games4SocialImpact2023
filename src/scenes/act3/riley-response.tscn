@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjjexq5riy7ms"]
+
+[ext_resource type="Script" path="res://src/scripts/riley-response.gd" id="1_xs03f"]
+
+[node name="riley-response" type="Node2D"]
+script = ExtResource("1_xs03f")
+
+[node name="Camera2D" type="Camera2D" parent="."]
