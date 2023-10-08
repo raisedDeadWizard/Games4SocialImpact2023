@@ -77,6 +77,6 @@ func _crash():
 	if dest == 3:
 		Global.totalScoreCurrAct += self.get_meta("Score")
 		print(Global.totalScoreCurrAct)
-		Global.totalScore += totalScoreCurrAct
+		Global.totalScore += Global.totalScoreCurrAct
 		Global.totalScoreCurrAct = 0
 		get_tree().change_scene_to_file("res://src/scenes/pre-industrial/akleda-response.tscn")
