@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" path="res://src/scripts/book_stack.gd" id="1_tani2"]
 [ext_resource type="Texture2D" uid="uid://ckfwin18sepgn" path="res://src/assets/bookMinigame/bookshelfBackground.png" id="2_2fys1"]
+
 [ext_resource type="PackedScene" uid="uid://dt4n1uac0dvtv" path="res://src/scenes/common_game.tscn" id="2_aw2no"]
 [ext_resource type="Texture2D" uid="uid://dsbgxqusknxvg" path="res://src/assets/bookMinigame/table.png" id="3_lh1gf"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxqyw"]
 size = Vector2(1335, 76)

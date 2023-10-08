@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://cr50x6rpku82b"]
+[gd_scene load_steps=3 format=3 uid="uid://dgbsyqblhwi0u"]
 
 [ext_resource type="Script" path="res://src/scripts/book.gd" id="1_7fx2w"]
 [ext_resource type="Texture2D" uid="uid://cv8jmad3be4t3" path="res://src/assets/book/book.png" id="2_kk7sr"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_7fx2w")
+metadata/Page1 = "Test"
+metadata/Page2 = "Test"
+metadata/Page3 = "Test"
+metadata/Page4 = "Test"
 
 [node name="Book" type="Sprite2D" parent="."]
 position = Vector2(962, 535)
