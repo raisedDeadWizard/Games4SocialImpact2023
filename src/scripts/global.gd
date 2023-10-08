@@ -14,6 +14,7 @@ var totalScoreCurrAct = 0
 var totalScore = 0
 
 var is_done_talking = false
+var act_thresholds = [100, 150, 200]
 
 const akleda_dialog : Array = [
 	"So I was collecting apples today, and I feel like I got less than I usually do. Do you know a way to get more apples?",
