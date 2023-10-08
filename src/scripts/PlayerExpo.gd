@@ -5,10 +5,8 @@ var bookNode = preload("res://src/scenes/book.tscn")
 func _ready():
 	
 	var book_instance = bookNode.instantiate()
-	book_instance.set_meta("Page1", "Player Expo")
-	book_instance.set_meta("Page2", "Page 2!")
-	book_instance.set_meta("Page3", "Page 3!")
-	book_instance.set_meta("Page4", "Page 4!")
+	book_instance.set_meta("Page1", "You are an immortal aspect of nature itself, and as you gain knowledge and help villagers you are able to fulfill your duty")
+	book_instance.set_meta("Page2", "and continue improving the lives of others, however if you fail the village and fail to protect the tree you lose your immortality. ")
 	self.add_child(book_instance)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

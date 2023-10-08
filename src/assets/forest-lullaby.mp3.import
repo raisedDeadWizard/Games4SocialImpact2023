@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/forest-lullaby.mp3-1b85eb543d1c6e98c1068e0952
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
