@@ -9,6 +9,7 @@ var treeNode
 var bkgdNode 
 var townNode
 var waldenNode
+var alreadyPressed = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -29,14 +30,15 @@ func _process(delta):
 	pass
 	
 func _unhandled_input(event):
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and !alreadyPressed:
 		print(event)
 		if event.is_pressed():
+			alreadyPressed = true
 			waldenNode.set_visibility_layer_bit(0, false)
 			
 			var gardenNode = garden.instantiate()
 			gardenNode.set_meta("maxDrops", 25)
-			gardenNode.set_meta("speed", 400)
+			gardenNode.set_meta("Dest", 1)
 			bkgdNode.add_child(gardenNode)
 			#get_tree().change_scene_to_file("res://src/scenes/Garden.tscn")
 
