@@ -7,15 +7,15 @@ var queue_ind = 0
 func _ready():
 	Global.is_done_talking = false
 	text_queue.append(dialogList[1])
-	var health = $Background/Tree.get_meta("Health")
+	var health = Global.tree_health
 	if Global.totalScore >= Global.act_thresholds[0]:
 		text_queue.append(dialogList[2])
 		text_queue.append(dialogList[3])
-		$Background/Tree.set_meta("Health", max(health - 1, 0))
+		Global.tree_health = max(health - 1, 0)
 	else:
 		text_queue.append(dialogList[4])
 		text_queue.append(dialogList[5])
-		$Background/Tree.set_meta("Health", min(health + 1, 3))
+		Global.tree_health = min(health + 1, 3)
 	$Background/Tree._updateHealth()
 	$Background/textbox/Label.visible_characters = 0
 	$Background/textbox/Label.text = text_queue[0]

@@ -50,8 +50,8 @@ scale = Vector2(0.753247, 1.1461)
 texture = ExtResource("4_ww44h")
 
 [node name="Left" type="Sprite2D" parent="Background"]
-position = Vector2(-350, 400)
-scale = Vector2(1, 1.332)
+position = Vector2(-430, 400)
+scale = Vector2(1.17219, 1.332)
 texture = ExtResource("5_o058g")
 
 [node name="Receiver" type="Area2D" parent="Background/Left"]
