@@ -4,6 +4,7 @@ extends Node2D
 func _ready():
 	Global.is_done_talking = false
 	$Background/textbox/Label.visible_characters = 0
+	$Background/textbox/Label2.text = "Harold"
 	$Background/textbox/Label.text = Global.harold_dialog[0]
 
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b3fs3nibfcf78"]
 
 [ext_resource type="Script" path="res://src/scripts/gilbert-prompt.gd" id="1_cfrvk"]
-[ext_resource type="PackedScene" uid="uid://cuqkdexxeubg" path="res://src/scenes/Background.tscn" id="2_cd28h"]
+[ext_resource type="PackedScene" path="res://src/scenes/Background.tscn" id="2_cd28h"]
 [ext_resource type="PackedScene" uid="uid://b1xarr44dkk5x" path="res://src/scenes/Textbox.tscn" id="2_cqcak"]
 [ext_resource type="PackedScene" path="res://src/scenes/industry.tscn" id="3_0s4fb"]
 [ext_resource type="PackedScene" uid="uid://bhoorcr64nkl7" path="res://src/scenes/Tree.tscn" id="4_prmrh"]

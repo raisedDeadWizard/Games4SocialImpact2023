@@ -18,6 +18,7 @@ func _ready():
 		Global.tree_health = min(health + 1, 3)
 	$Background/Tree._updateHealth()
 	$Background/textbox/Label.visible_characters = 0
+	$Background/textbox/Label2.text = "Akelda"
 	$Background/textbox/Label.text = text_queue[0]
 
 
@@ -41,6 +42,10 @@ func _unhandled_input(event):
 func _nextDialog():
 	queue_ind += 1
 	Global.is_done_talking = false
+	if queue_ind % 2 == 1:
+		$Background/textbox/Label2.text = "You"
+	else:
+		$Background/textbox/Label2.text = "Akelda"
 	$Background/textbox/Label.visible_characters = 0
 	$Background/textbox/Label.text = text_queue[queue_ind]
 	
