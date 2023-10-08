@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://b0vcsk4jndubk"]
+[gd_scene load_steps=2 format=3 uid="uid://b0vcsk4jndubk"]
+
+[ext_resource type="Texture2D" uid="uid://mvxruq2a0f37" path="res://src/assets/characters/harold.png" id="1_q1kjk"]
 
 [node name="harold_char" type="Node2D"]
+
+[node name="CharSprite" type="Sprite2D" parent="."]
+position = Vector2(330, 110)
+texture = ExtResource("1_q1kjk")
