@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://sadfldpafy0f"]
+
+[ext_resource type="Texture2D" uid="uid://ce5t3865bf5sh" path="res://src/assets/characters/Akelda.png" id="1_cbg7u"]
+
+[node name="akelda_char" type="Node2D"]
+
+[node name="CharSprite" type="Sprite2D" parent="."]
+position = Vector2(330, 110)
+texture = ExtResource("1_cbg7u")

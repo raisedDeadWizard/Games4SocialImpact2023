@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=3 uid="uid://buu7vubruqf5y"]
+
+[ext_resource type="Script" path="res://src/scripts/WeedGameCore.gd" id="1_4v3x6"]
+[ext_resource type="Texture2D" uid="uid://ooqeyhiqo252" path="res://src/assets/gardenMinigame/garden_topView.png" id="3_ospfc"]
+[ext_resource type="PackedScene" uid="uid://2v6mkonjqyk3" path="res://src/scenes/common_game.tscn" id="3_si1m5"]
+[ext_resource type="Texture2D" uid="uid://ckld6lsf2181e" path="res://src/assets/gardenMinigame/glove.png" id="4_6boe2"]
+[ext_resource type="Texture2D" uid="uid://exminsvxq84j" path="res://src/assets/gardenMinigame/pruning_shears.png" id="5_xi140"]
+[ext_resource type="Texture2D" uid="uid://cvm4xbc6tyfqc" path="res://src/assets/gardenMinigame/watering_can.png" id="6_abvmh"]
+
+[node name="WeedGame" type="Node2D"]
+position = Vector2(2, 2)
+script = ExtResource("1_4v3x6")
+metadata/SelectedTool = 0
+
+[node name="GardenTopView" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(960, 540)
+texture = ExtResource("3_ospfc")
+
+[node name="Weeds" type="Node" parent="."]
+
+[node name="SelectedTool" type="Node" parent="."]
+
+[node name="Green" type="Sprite2D" parent="SelectedTool"]
+position = Vector2(712, 952)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_6boe2")
+
+[node name="Yellow" type="Sprite2D" parent="SelectedTool"]
+position = Vector2(962, 952)
+scale = Vector2(0.7, 0.703)
+texture = ExtResource("5_xi140")
+
+[node name="Red" type="Sprite2D" parent="SelectedTool"]
+position = Vector2(1212, 952)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("6_abvmh")
+
+[node name="CommonGame" parent="." instance=ExtResource("3_si1m5")]
+
+[node name="BlackoutScreen" parent="CommonGame" index="0"]
+position = Vector2(962, 542)
+
+[node name="Timer" parent="CommonGame" index="1"]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 1922.0
+offset_bottom = 102.0
+metadata/TimerDuration = 35
+metadata/_edit_use_anchors_ = true
+
+[node name="Instructions" parent="CommonGame" index="2"]
+offset_left = 162.0
+offset_top = 212.0
+offset_right = 1762.0
+offset_bottom = 812.0
+text = "This is your garden!
+You must tend to your plants.
+Use Z, X, C, or arrow keys to swap tools.
+- Pick dandelions with the glove. (Z, ←)
+- Trim unruly bushes. (X, ↑, ↓)
+- Watering can. (C, →)"
+metadata/_edit_use_anchors_ = true
+
+[node name="ConfirmButton" parent="CommonGame" index="3"]
+offset_left = 837.0
+offset_top = 852.0
+offset_right = 1087.0
+offset_bottom = 952.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Countdown" parent="CommonGame" index="4"]
+offset_left = 812.0
+offset_top = 417.0
+offset_right = 1112.0
+offset_bottom = 667.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Score" parent="CommonGame" index="5"]
+offset_left = 762.0
+offset_top = 342.0
+offset_right = 1162.0
+offset_bottom = 742.0
+metadata/_edit_use_anchors_ = true
+
+[editable path="CommonGame"]
