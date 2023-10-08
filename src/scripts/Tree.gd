@@ -11,6 +11,8 @@ func _process(delta):
 	
 func _updateHealth():
 	var health = Global.tree_health
+	if health == 3:
+		get_tree().change_scene_to_file("res://src/scenes/GameOver.tscn")
 	$Wilting.hide()
 	$Healthy.hide()
 	$Dying.hide()
