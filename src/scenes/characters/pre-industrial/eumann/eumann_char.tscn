@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://mtuosd6aejba"]
+
+[ext_resource type="Texture2D" uid="uid://bvqakuxag4bu7" path="res://src/assets/characters/Eumann.png" id="1_7ijck"]
+
+[node name="eumann_char" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(330, 110)
+texture = ExtResource("1_7ijck")

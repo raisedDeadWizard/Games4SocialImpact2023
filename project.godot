@@ -15,6 +15,10 @@ run/main_scene="res://src/scenes/main.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://src/assets/icon.svg"
 
+[autoload]
+
+Global="*res://src/scripts/global.gd"
+
 [display]
 
 window/size/viewport_width=1920
@@ -23,6 +27,14 @@ window/size/viewport_height=1080
 [dotnet]
 
 project/assembly_name="Immorticulture"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/coi_serviceworker/plugin.cfg")
+
+[physics]
+
+common/physics_ticks_per_second=100
 
 [rendering]
 

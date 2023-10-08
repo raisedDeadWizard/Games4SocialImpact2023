@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://br7mly6fyqqvw"]
+
+[ext_resource type="Script" path="res://src/scriptswalden-response.gd" id="1_40hbe"]
+
+[node name="walden-response" type="Node2D"]
+script = ExtResource("1_40hbe")
+
+[node name="Camera2D" type="Camera2D" parent="."]
