@@ -28,10 +28,13 @@ window/size/viewport_height=1080
 
 project/assembly_name="Immorticulture"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/coi_serviceworker/plugin.cfg")
+
 [physics]
 
-common/physics_ticks_per_second=240
-common/physics_jitter_fix=0.5
+common/physics_ticks_per_second=100
 
 [rendering]
 
