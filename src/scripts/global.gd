@@ -13,6 +13,8 @@ var weed_timer = 0
 var totalScoreCurrAct = 0
 var totalScore = 0
 
+var is_done_talking = false
+
 const akleda_dialog : Array = [
 	"So I was collecting apples today, and I feel like I got less than I usually do. Do you know a way to get more apples?",
 	"What did you find out about?",
