@@ -18,7 +18,7 @@ script = ExtResource("1_a5hls")
 
 [node name="Tree" parent="Background" instance=ExtResource("4_tk5bs")]
 
+[node name="walden_char" parent="Background" instance=ExtResource("6_2ysgi")]
+
 [node name="textbox" parent="Background" instance=ExtResource("2_q5smj")]
 position = Vector2(-304, 410)
-
-[node name="walden_char" parent="Background" instance=ExtResource("6_2ysgi")]

@@ -14,11 +14,11 @@ script = ExtResource("1_ovp1e")
 
 [node name="Background" parent="." instance=ExtResource("2_pckcc")]
 
-[node name="akelda_char" parent="Background" instance=ExtResource("3_sg2co")]
-
 [node name="pre-industry" parent="Background" instance=ExtResource("4_3026c")]
 
 [node name="Tree" parent="Background" instance=ExtResource("5_km4fe")]
+
+[node name="akelda_char" parent="Background" instance=ExtResource("3_sg2co")]
 
 [node name="textbox" parent="Background" instance=ExtResource("2_qrcva")]
 position = Vector2(-304, 410)
