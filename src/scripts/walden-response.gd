@@ -27,7 +27,7 @@ func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		print(event)
 		if event.is_pressed() && Global.is_done_talking:
-			if queue_ind < text_queue.size():
+			if queue_ind < text_queue.size()-1:
 				_nextDialog()
 			else:
 				get_tree().change_scene_to_file("res://src/scenes/main.tscn")

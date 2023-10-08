@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cjna0s8wxlvyt"]
 
 [ext_resource type="Script" path="res://src/scripts/akleda-response.gd" id="1_ovp1e"]
-[ext_resource type="PackedScene" path="res://src/scenes/Background.tscn" id="2_pckcc"]
+[ext_resource type="PackedScene" uid="uid://cuqkdexxeubg" path="res://src/scenes/Background.tscn" id="2_pckcc"]
 [ext_resource type="PackedScene" uid="uid://b1xarr44dkk5x" path="res://src/scenes/Textbox.tscn" id="2_qrcva"]
 [ext_resource type="PackedScene" uid="uid://sadfldpafy0f" path="res://src/scenes/characters/pre-industrial/akelda/akelda_char.tscn" id="3_sg2co"]
 [ext_resource type="PackedScene" path="res://src/scenes/pre-industry.tscn" id="4_3026c"]

@@ -9,19 +9,19 @@ func _ready():
 		0:
 			print("UPDATED GLOBALS")
 			Global.max_drops = 25
-			Global.water_timer = 42
+			Global.water_timer = 35
 			Global.weed_timer = 35
 			Global.book_timer = 15
 		13:
 			print("UPDATED GLOBALS")
 			Global.max_drops = 30
-			Global.water_timer = 50
+			Global.water_timer = 45
 			Global.weed_timer = 25
 			Global.book_timer = 10
 		26:
 			print("UPDATED GLOBALS")
 			Global.max_drops = 35
-			Global.water_timer = 60
+			Global.water_timer = 50
 			Global.weed_timer = 20
 			Global.book_timer = 7
 		

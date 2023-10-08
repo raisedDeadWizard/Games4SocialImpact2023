@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgbsyqblhwi0u"]
+[gd_scene load_steps=4 format=3 uid="uid://dgbsyqblhwi0u"]
 
 [ext_resource type="Script" path="res://src/scripts/book.gd" id="1_7fx2w"]
 [ext_resource type="Texture2D" uid="uid://cv8jmad3be4t3" path="res://src/assets/book/book.png" id="2_kk7sr"]
+[ext_resource type="FontFile" uid="uid://buksoxey3ksve" path="res://src/assets/Demo_ConeriaScript.ttf" id="3_mm4t7"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_7fx2w")
@@ -20,6 +21,7 @@ offset_top = 275.0
 offset_right = 950.0
 offset_bottom = 875.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_mm4t7")
 theme_override_font_sizes/font_size = 48
 text = "Test Text"
 horizontal_alignment = 1
@@ -31,6 +33,7 @@ offset_top = 275.0
 offset_right = 1580.0
 offset_bottom = 875.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_mm4t7")
 theme_override_font_sizes/font_size = 48
 text = "Test Text"
 horizontal_alignment = 1
