@@ -2,7 +2,7 @@ extends Node2D
 
 
 var character = preload("res://src/scenes/characters/post-industrial/riley/riley_char.tscn")
-var town = preload("res://src/scenes/pre-industry.tscn")
+var town = preload("res://src/scenes/post-industry.tscn")
 var bkgd = preload("res://src/scenes/Background.tscn")
 var tree = preload("res://src/scenes/Tree.tscn")
 
