@@ -5,7 +5,7 @@ var character = preload("res://src/scenes/characters/pre-industrial/akelda/akeld
 var town = preload("res://src/scenes/pre-industry.tscn")
 var bkgd = preload("res://src/scenes/Background.tscn")
 var tree = preload("res://src/scenes/Tree.tscn")
-@onready var textbox = $textbox
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
