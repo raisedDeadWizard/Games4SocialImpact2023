@@ -1,12 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://6fauhbkjpeoa"]
+[gd_scene load_steps=2 format=3 uid="uid://6fauhbkjpeoa"]
 
 [ext_resource type="Script" path="res://src/scripts/main.gd" id="1_wv2ts"]
-[ext_resource type="PackedScene" uid="uid://bdxc218f8wk0c" path="res://src/scenes/weed.tscn" id="2_wavai"]
 
 [node name="main" type="Node"]
 script = ExtResource("1_wv2ts")
-
-[node name="WeedGame" parent="." instance=ExtResource("2_wavai")]
-
-[editable path="WeedGame"]
-[editable path="WeedGame/CommonGame"]
