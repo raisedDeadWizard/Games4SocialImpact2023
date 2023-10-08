@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8mwdeal7tmn1"]
+
+[ext_resource type="Script" path="res://src/scripts/TheEnd.gd" id="1_dakvi"]
+[ext_resource type="Texture2D" uid="uid://ce2ckeklrxmpy" path="res://src/assets/ui/gameOverScreen.png" id="1_w1bal"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_dakvi")
+
+[node name="DeadTree" type="Sprite2D" parent="."]
+position = Vector2(963, 536)
+texture = ExtResource("1_w1bal")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 383.0
+offset_right = 1860.0
+offset_bottom = 663.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 100
+text = "The Tree of Life has succeeded 
+many generations, with your care."
+horizontal_alignment = 1
