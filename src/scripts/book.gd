@@ -10,27 +10,14 @@ func _ready():
 	
 	book = [
 	get_meta("Page1"),
-	get_meta("Page2"),
-	get_meta("Page3"),
-	get_meta("Page4")
+	get_meta("Page2")
 	]
-	$LeftButton.pressed.connect(_pageDown)
-	$RightButton.pressed.connect(_pageUp)
 	_updateText()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass	
 	
-func _pageUp():
-	if(ind < floor((book.size() - 1) / 2)):
-		ind += 1
-	_updateText()
-	
-func _pageDown():
-	if(ind != 0):
-		ind -= 1
-	_updateText()
 	
 func _updateText():
 	$Label1.text = book[ind*2]
