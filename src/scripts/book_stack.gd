@@ -10,6 +10,7 @@ func _ready():
 	_create_books()
 	for node in $pickable.get_children():
 		node.connect("clicked", _on_pickable_clicked)
+	$CommonGame.set_meta("Dest", 3)
 	
 func _on_pickable_clicked(object):
 	if !held_object:

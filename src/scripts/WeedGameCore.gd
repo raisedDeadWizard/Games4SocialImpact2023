@@ -12,6 +12,7 @@ var rng = RandomNumberGenerator.new()
 var plamt = preload("res://src/scenes/plamt.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$CommonGame.set_meta("Dest",2)
 	for x in range(5):
 		matrix.append([])
 		matrix[x]=[]        

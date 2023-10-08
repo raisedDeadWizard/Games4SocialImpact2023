@@ -70,3 +70,7 @@ func _crash():
 	print("IMPLEMENT GOING BACK TO DIALOG NOW DOOFUS ", dest)
 	if dest == 1:
 		get_tree().change_scene_to_file("res://src/scenes/weed.tscn")
+	if dest == 2:
+		get_tree().change_scene_to_file("res://src/scenes/book_stack.tscn")
+	if dest == 3:
+		get_tree().change_scene_to_file("res://src/scenes/pre-industrial/akleda-response.tscn")
