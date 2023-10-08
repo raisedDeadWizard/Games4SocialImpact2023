@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://b30nyw03t651g"]
+[gd_scene load_steps=3 format=3 uid="uid://b30nyw03t651g"]
 
 [ext_resource type="Script" path="res://src/scripts/brendan-response.gd" id="1_7vbl1"]
+[ext_resource type="PackedScene" uid="uid://b1xarr44dkk5x" path="res://src/scenes/Textbox.tscn" id="2_b63fv"]
 
 [node name="brendan-response" type="Node2D"]
 script = ExtResource("1_7vbl1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="textbox" parent="." instance=ExtResource("2_b63fv")]
+position = Vector2(-291, 398)

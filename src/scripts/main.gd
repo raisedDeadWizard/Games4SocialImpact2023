@@ -5,7 +5,6 @@ extends Node
 func _ready():
 	
 	Global.scene_index += 1
-	print(Global.totalScore)
 	match Global.scene_index:
 		0:
 			print("UPDATED GLOBALS")
@@ -22,7 +21,11 @@ func _ready():
 			Global.max_drops = 35
 			Global.weed_timer = 20
 			Global.book_timer = 7
-		
+	
+	if Global.scene_index == 39:
+		Global.scene_index = -1
+		get_tree().change_scene_to_file("res://src/scenes/main.tscn")
+	print("index: ",Global.scene_index)
 	get_tree().change_scene_to_file(Global.scene_array[Global.scene_index])
 
 

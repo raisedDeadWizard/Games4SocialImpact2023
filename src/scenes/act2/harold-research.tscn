@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://eg7epk3pv45q"]
 
-[ext_resource type="Script" path="res://src/scripts/PlayerExpo.gd" id="1_6ireb"]
+[ext_resource type="Script" path="res://src/scripts/harold-research.gd" id="1_58dou"]
 [ext_resource type="Texture2D" uid="uid://bkhnp8qmpnj6s" path="res://src/assets/background/baseBackground.png" id="2_g81rv"]
 [ext_resource type="Texture2D" uid="uid://c8p8spxbby0g4" path="res://src/assets/background/healthyTree.png" id="3_qvxxe"]
 
 [node name="PlayerExpo" type="Node2D"]
-script = ExtResource("1_6ireb")
+script = ExtResource("1_58dou")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
