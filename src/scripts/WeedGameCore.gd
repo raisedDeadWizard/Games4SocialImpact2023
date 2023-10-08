@@ -14,8 +14,6 @@ var time = Global.weed_timer
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$CommonGame/Timer.set_meta("TimerDuration", Global.weed_timer)
-	print("global var:", Global.weed_timer)
-	print("timer:", $CommonGame/Timer.get_meta("TimerDuration"))
 	for x in range(5):
 		matrix.append([])
 		matrix[x]=[]        
@@ -86,7 +84,6 @@ func _spawnPlant():
 			$Weeds.add_child(newplamt)
 			newplamt.connect("clickButt", clickPant)
 			return
-	print("GAME OVER")
 
 func clickPant(object):
 	var x = object.get_meta("x")
