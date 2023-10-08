@@ -10,6 +10,7 @@ height = 880.0
 
 [node name="Droplet" type="CharacterBody2D"]
 script = ExtResource("1_p7h4r")
+metadata/Speed = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4)

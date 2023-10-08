@@ -30,8 +30,9 @@ radius = 320.156
 radius = 401.996
 
 [node name="Garden" type="Node2D"]
-position = Vector2(960, 540)
 script = ExtResource("1_tgxat")
+metadata/maxDrops = 0
+metadata/speed = 0
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_gwxse")
@@ -75,7 +76,46 @@ shape = SubResource("CircleShape2D_opegf")
 
 [node name="CommonGame" parent="." instance=ExtResource("4_fvj5b")]
 
+[node name="BlackoutScreen" parent="CommonGame" index="0"]
+position = Vector2(0, 0)
+
 [node name="Timer" parent="CommonGame" index="1"]
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = -440.0
 metadata/TimerDuration = 30
+metadata/_edit_use_anchors_ = true
+
+[node name="Instructions" parent="CommonGame" index="2"]
+offset_left = -450.0
+offset_top = -330.0
+offset_right = 450.0
+offset_bottom = 270.0
+text = "Use the left, right, and 
+up arrow keys to catch the 
+water droplets with the leaves"
+metadata/_edit_use_anchors_ = true
+
+[node name="ConfirmButton" parent="CommonGame" index="3"]
+offset_left = -125.0
+offset_top = 310.0
+offset_right = 125.0
+offset_bottom = 410.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Countdown" parent="CommonGame" index="4"]
+offset_left = -150.0
+offset_top = -125.0
+offset_right = 150.0
+offset_bottom = 125.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Score" parent="CommonGame" index="5"]
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+metadata/_edit_use_anchors_ = true
 
 [editable path="CommonGame"]
