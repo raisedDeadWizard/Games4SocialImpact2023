@@ -1,7 +1,8 @@
 extends Label
 
+
 # Prints 8 characters a second.
-const TEXT_SPEED = 0.125
+const TEXT_SPEED = 0.03125
 
 var timer
 
@@ -14,7 +15,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	timer += delta
-	print(timer)
 	if(timer >= TEXT_SPEED):
 		timer -= TEXT_SPEED
 		visible_characters += 1
