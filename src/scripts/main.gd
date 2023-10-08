@@ -18,14 +18,14 @@ func _ready():
 			Global.water_timer = 50
 			Global.weed_timer = 25
 			Global.book_timer = 10
-		25:
+		26:
 			print("UPDATED GLOBALS")
 			Global.max_drops = 35
 			Global.water_timer = 60
 			Global.weed_timer = 20
 			Global.book_timer = 7
 		
-	if Global.scene_index == 39:
+	if Global.scene_index == 41:
 		Global.scene_index = -1
 		get_tree().change_scene_to_file("res://src/scenes/main.tscn")
 	get_tree().change_scene_to_file(Global.scene_array[Global.scene_index])

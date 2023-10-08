@@ -20,6 +20,7 @@ var dropletNode = preload("res://src/scenes/Droplet.tscn")
 func _ready():
 	timer = 0 # Replace with function body.
 	offset = 1
+	$CommonGame/Timer.set_meta("TimerDuration",maxTime)
 	print(maxTime)
 	print(numOfDroplets)
 
