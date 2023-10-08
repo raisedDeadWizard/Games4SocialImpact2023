@@ -1,7 +1,7 @@
 extends Node2D
 
 
-var numOfDroplets = 25
+var numOfDroplets = Global.max_drops
 var currNumOfDroplets = 0
 
 var maxTime = 30
@@ -20,11 +20,7 @@ var dropletNode = preload("res://src/scenes/Droplet.tscn")
 func _ready():
 	timer = 0 # Replace with function body.
 	offset = 1
-	numOfDroplets = get_meta("maxDrops")
-	print(numOfDroplets)
-	dest = get_meta("Dest")
-	print("Garden: ", dest)
-	$CommonGame.set_meta("Dest", dest)
+
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

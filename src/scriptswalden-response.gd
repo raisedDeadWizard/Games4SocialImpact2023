@@ -35,5 +35,5 @@ func _unhandled_input(event):
 		if event.is_pressed():
 			alreadyPressed = true
 			waldenNode.set_visibility_layer_bit(0, false)
-			print("END OF THE ROAD")
+			get_tree().change_scene_to_file("res://src/scenes/main.tscn")
 			
