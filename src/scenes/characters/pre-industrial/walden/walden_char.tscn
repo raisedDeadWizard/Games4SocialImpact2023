@@ -5,5 +5,5 @@
 [node name="walden_char" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(330, 110)
+position = Vector2(339, 171)
 texture = ExtResource("1_g8wcc")
