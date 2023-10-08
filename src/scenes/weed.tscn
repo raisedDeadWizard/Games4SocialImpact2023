@@ -1,15 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://bdxc218f8wk0c"]
+[gd_scene load_steps=7 format=3 uid="uid://bdxc218f8wk0c"]
 
 [ext_resource type="Script" path="res://src/scripts/WeedGameCore.gd" id="1_4v3x6"]
 [ext_resource type="Texture2D" uid="uid://d4eus3hd42fpf" path="res://src/assets/gardenMinigame/garden_topView.png" id="3_ospfc"]
-[ext_resource type="PackedScene" uid="uid://bb8bnvlds1j3f" path="res://src/scenes/common_game.tscn" id="3_si1m5"]
-[ext_resource type="Texture2D" uid="uid://btoxuknde31tu" path="res://src/assets/gardenMinigame/CABBAGE.png" id="3_urcl1"]
-[ext_resource type="Texture2D" uid="uid://ce3ijgg5ov3yy" path="res://src/assets/gardenMinigame/green-glove.png" id="4_784a6"]
-[ext_resource type="Texture2D" uid="uid://bu7ogq8fpyf74" path="res://src/assets/gardenMinigame/yellow-glove.png" id="5_wpff3"]
-[ext_resource type="Texture2D" uid="uid://dpgt8il8gpphm" path="res://src/assets/gardenMinigame/red-glove.png" id="6_x3mgb"]
+[ext_resource type="PackedScene" uid="uid://2v6mkonjqyk3" path="res://src/scenes/common_game.tscn" id="3_si1m5"]
+[ext_resource type="Texture2D" uid="uid://ckld6lsf2181e" path="res://src/assets/gardenMinigame/glove.png" id="4_6boe2"]
+[ext_resource type="Texture2D" uid="uid://exminsvxq84j" path="res://src/assets/gardenMinigame/pruning_shears.png" id="5_xi140"]
+[ext_resource type="Texture2D" uid="uid://cvm4xbc6tyfqc" path="res://src/assets/gardenMinigame/watering_can.png" id="6_abvmh"]
 
 [node name="WeedGame" type="Node2D"]
 script = ExtResource("1_4v3x6")
+metadata/SelectedTool = 0
 
 [node name="GardenTopView" type="Sprite2D" parent="."]
 z_index = -10
@@ -18,35 +18,36 @@ texture = ExtResource("3_ospfc")
 
 [node name="Weeds" type="Node" parent="."]
 
-[node name="Button" type="Button" parent="Weeds"]
-offset_left = 219.0
-offset_top = 247.0
-offset_right = 379.0
-offset_bottom = 397.0
-action_mode = 0
-icon = ExtResource("3_urcl1")
-flat = true
-
 [node name="SelectedTool" type="Node" parent="."]
 
 [node name="Green" type="Sprite2D" parent="SelectedTool"]
 position = Vector2(710, 950)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("4_784a6")
+texture = ExtResource("4_6boe2")
 
 [node name="Yellow" type="Sprite2D" parent="SelectedTool"]
 position = Vector2(960, 950)
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("5_wpff3")
+scale = Vector2(0.7, 0.703)
+texture = ExtResource("5_xi140")
 
 [node name="Red" type="Sprite2D" parent="SelectedTool"]
 position = Vector2(1210, 950)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("6_x3mgb")
+texture = ExtResource("6_abvmh")
 
 [node name="CommonGame" parent="." instance=ExtResource("3_si1m5")]
 
 [node name="Timer" parent="CommonGame" index="1"]
-metadata/TimerDuration = 45
+metadata/TimerDuration = 35
+
+[node name="Instructions" parent="CommonGame" index="2"]
+offset_left = 160.0
+offset_right = 1760.0
+text = "This is your garden!
+You must tend to your plants.
+Use Z, X, C, or arrow keys to swap tools.
+- Pick dandelions with the glove. (Z, ←)
+- Trim unruly bushes. (X, ↑, ↓)
+- Watering can. (C, →)"
 
 [editable path="CommonGame"]
