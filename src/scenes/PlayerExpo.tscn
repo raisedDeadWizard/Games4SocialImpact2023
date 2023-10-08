@@ -12,5 +12,4 @@ position = Vector2(960, 540)
 texture = ExtResource("2_iqlgl")
 
 [node name="Tree" type="Sprite2D" parent="Background"]
-position = Vector2(-52, 0)
 texture = ExtResource("3_pwq4p")
