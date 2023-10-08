@@ -12,5 +12,6 @@ metadata/Health = 0
 texture = ExtResource("2_j08rb")
 
 [node name="Wilting" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-27, 0)
 texture = ExtResource("3_aw1tk")

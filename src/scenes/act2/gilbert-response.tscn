@@ -1,12 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://cc0c04ftxsrvp"]
+[gd_scene load_steps=7 format=3 uid="uid://cc0c04ftxsrvp"]
 
 [ext_resource type="Script" path="res://src/scripts/gilbert-response.gd" id="1_sjort"]
+[ext_resource type="PackedScene" uid="uid://cuqkdexxeubg" path="res://src/scenes/Background.tscn" id="2_3rfn6"]
 [ext_resource type="PackedScene" uid="uid://b1xarr44dkk5x" path="res://src/scenes/Textbox.tscn" id="2_m8nic"]
+[ext_resource type="PackedScene" path="res://src/scenes/industry.tscn" id="3_jg0iq"]
+[ext_resource type="PackedScene" uid="uid://bhoorcr64nkl7" path="res://src/scenes/Tree.tscn" id="4_csthr"]
+[ext_resource type="PackedScene" uid="uid://dhr8l2giq1n3n" path="res://src/scenes/characters/industrial/gilbert/gilbert_char.tscn" id="6_rqrvr"]
 
 [node name="gilbert_response" type="Node2D"]
 script = ExtResource("1_sjort")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="textbox" parent="." instance=ExtResource("2_m8nic")]
-position = Vector2(-291, 398)
+[node name="Background" parent="." instance=ExtResource("2_3rfn6")]
+
+[node name="industry" parent="Background" instance=ExtResource("3_jg0iq")]
+
+[node name="Tree" parent="Background" instance=ExtResource("4_csthr")]
+
+[node name="textbox" parent="Background" instance=ExtResource("2_m8nic")]
+position = Vector2(-304, 410)
+
+[node name="gilbert_char" parent="Background" instance=ExtResource("6_rqrvr")]
