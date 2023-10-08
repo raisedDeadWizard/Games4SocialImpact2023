@@ -1,7 +1,7 @@
 extends Node2D
 
 
-const numOfDroplets = 25
+var numOfDroplets = 25
 var currNumOfDroplets = 0
 
 var maxTime = 30
@@ -11,6 +11,7 @@ var offset = 0
 var totalScore = 0
 var scoreIncrement = 10
 var nextSpawn = 0
+var speed = 0
 
 var rng = RandomNumberGenerator.new()
 var dropletNode = preload("res://src/scenes/Droplet.tscn")
@@ -18,6 +19,11 @@ var dropletNode = preload("res://src/scenes/Droplet.tscn")
 func _ready():
 	timer = 0 # Replace with function body.
 	offset = 1
+	var numOfDroplets = get_meta("maxDrops")
+	speed = get_meta("speed")
+	print(numOfDroplets)
+	print(speed)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -4,14 +4,20 @@ var walden = preload("res://src/scenes/characters/pre-industrial/walden/walden_c
 var town = preload("res://src/scenes/pre-industry.tscn")
 var bkgd = preload("res://src/scenes/Background.tscn")
 var tree = preload("res://src/scenes/Tree.tscn")
+var garden = preload("res://src/scenes/Garden.tscn")
+var treeNode
+var bkgdNode 
+var townNode
+var waldenNode
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var treeNode = tree.instantiate()
+	treeNode = tree.instantiate()
 	treeNode.set_meta("Health", 1)
-	var bkgdNode = bkgd.instantiate()
-	var townNode = town.instantiate()
-	var waldenNode = walden.instantiate()
+	bkgdNode = bkgd.instantiate()
+	townNode = town.instantiate()
+	waldenNode = walden.instantiate()
 	
 	bkgdNode.add_child(townNode)
 	bkgdNode.add_child(treeNode)
@@ -26,5 +32,11 @@ func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		print(event)
 		if event.is_pressed():
-			get_tree().change_scene_to_file("res://src/scenes/Garden.tscn")
+			waldenNode.set_visibility_layer_bit(0, false)
+			
+			var gardenNode = garden.instantiate()
+			gardenNode.set_meta("maxDrops", 25)
+			gardenNode.set_meta("speed", 400)
+			bkgdNode.add_child(gardenNode)
+			#get_tree().change_scene_to_file("res://src/scenes/Garden.tscn")
 
