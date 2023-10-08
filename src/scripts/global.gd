@@ -96,22 +96,25 @@ var scene_array : Array = [
 	
 	# act 1
 	
-	"res://src/scenes/act1/akelda-prompt.tscn",
+	"res://src/scenes/act1/walden-prompt.tscn",
 	"res://src/scenes/Garden.tscn",
+	"res://src/scenes/act1/walden-research.tscn",
+	"res://src/scenes/act1/walden-response.tscn",
+	
+	"res://src/scenes/act1/akelda-prompt.tscn",
+	"res://src/scenes/Weed.tscn",
 	"res://src/scenes/act1/akelda-research.tscn",
 	"res://src/scenes/act1/akelda-response.tscn",
 	
 	"res://src/scenes/act1/eumann-prompt.tscn",
-	"res://src/scenes/Weed.tscn",
+	"res://src/scenes/book_stack.tscn",
 	"res://src/scenes/act1/eumann-research.tscn",
 	"res://src/scenes/act1/eumann-response.tscn",
 	
-	"res://src/scenes/act1/walden-prompt.tscn",
-	"res://src/scenes/book_stack.tscn",
-	"res://src/scenes/act1/walden-research.tscn",
-	"res://src/scenes/act1/walden-response.tscn",
+	
 	
 	# act 2
+	"res://src/scenes/transitionact1to2.tscn",
 	
 	"res://src/scenes/act2/harold-prompt.tscn",
 	"res://src/scenes/Garden.tscn",
@@ -129,6 +132,7 @@ var scene_array : Array = [
 	"res://src/scenes/act2/judith-response.tscn",
 	
 	# act 3
+	"res://src/scenes/transitionact2to3.tscn",
 	
 	"res://src/scenes/act3/riley-prompt.tscn",
 	"res://src/scenes/Garden.tscn",
