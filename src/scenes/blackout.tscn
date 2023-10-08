@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1p01mofs6wer"]
+
+[ext_resource type="Texture2D" uid="uid://ceemib0mxflm7" path="res://src/assets/blackout.png" id="1_orx45"]
+
+[node name="blackout" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-8, 1.00003)
+scale = Vector2(191.4, 106.8)
+texture = ExtResource("1_orx45")
+
+[node name="Camera2D" type="Camera2D" parent="."]

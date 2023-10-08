@@ -1,14 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://bahbgw6tmcbk5"]
+[gd_scene load_steps=3 format=3 uid="uid://b1xarr44dkk5x"]
 
-[ext_resource type="Texture2D" uid="uid://cja1jvax5pft1" path="res://src/assets/ui/textbox.png" id="1_q3gd3"]
+[ext_resource type="Texture2D" uid="uid://bcrvdrwl4iowf" path="res://src/assets/ui/textbox.png" id="1_q3gd3"]
+[ext_resource type="Script" path="res://src/scripts/textScrollExample.gd" id="2_a8qu4"]
 
-[node name="Textbox" type="Node2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="textbox" type="Sprite2D"]
+z_index = 5
 position = Vector2(656, 950)
 texture = ExtResource("1_q3gd3")
 
-[node name="Label" type="Label" parent="Sprite2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-499, -138)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_q3gd3")
+
+[node name="Label" type="Label" parent="."]
 anchors_preset = -1
 anchor_left = 0.079
 anchor_top = 0.293
@@ -19,5 +24,28 @@ offset_top = -147.976
 offset_right = -617.304
 offset_bottom = -88.936
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 30
 text = "INSERT BLANK TEXT"
+autowrap_mode = 3
+script = ExtResource("2_a8qu4")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.079
+anchor_top = 0.293
+anchor_right = 0.906
+anchor_bottom = 0.698
+offset_left = -704.436
+offset_top = -225.976
+offset_right = -1566.3
+offset_bottom = -219.936
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 30
+text = "Name"
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true

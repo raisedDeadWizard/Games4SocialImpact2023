@@ -1,9 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://camhh28plki7b"]
+[gd_scene load_steps=12 format=3 uid="uid://camhh28plki7b"]
 
 [ext_resource type="Texture2D" uid="uid://bkhnp8qmpnj6s" path="res://src/assets/background/baseBackground.png" id="1_gwxse"]
 [ext_resource type="Script" path="res://src/scripts/Garden.gd" id="1_tgxat"]
-[ext_resource type="Texture2D" uid="uid://g6v5bl58mv1y" path="res://src/assets/waterMinigame/plant.png" id="2_j55nu"]
-[ext_resource type="PackedScene" uid="uid://2v6mkonjqyk3" path="res://src/scenes/common_game.tscn" id="4_fvj5b"]
+[ext_resource type="PackedScene" uid="uid://dt4n1uac0dvtv" path="res://src/scenes/common_game.tscn" id="4_fvj5b"]
+[ext_resource type="Texture2D" uid="uid://cl0a0itew3twp" path="res://src/assets/waterMinigame/stem.png" id="4_ww44h"]
+[ext_resource type="Texture2D" uid="uid://33dkq8h2hl1w" path="res://src/assets/waterMinigame/leftLeaf.png" id="5_o058g"]
+[ext_resource type="Texture2D" uid="uid://psennjx2042" path="res://src/assets/waterMinigame/upLeaf.png" id="6_6t2a3"]
+[ext_resource type="Texture2D" uid="uid://c4qs87l3w35c3" path="res://src/assets/waterMinigame/rightLeaf.png" id="7_gi5ii"]
 
 [sub_resource type="GDScript" id="GDScript_dq0o0"]
 script/source = "extends Area2D
@@ -20,14 +23,17 @@ func _process(delta):
 	pass
 "
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qr33a"]
-radius = 430.465
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dbgpb"]
+radius = 185.444
+height = 1100.19
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ac14a"]
-radius = 320.156
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_08box"]
+radius = 620.0
+height = 1240.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_opegf"]
-radius = 401.996
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4lbrh"]
+radius = 449.994
+height = 1300.0
 
 [node name="Garden" type="Node2D"]
 script = ExtResource("1_tgxat")
@@ -35,48 +41,58 @@ metadata/maxDrops = 0
 metadata/Dest = 0
 
 [node name="Background" type="Sprite2D" parent="."]
+position = Vector2(54, 4)
 texture = ExtResource("1_gwxse")
 
-[node name="Plant" type="Sprite2D" parent="Background"]
-position = Vector2(13.125, 382.781)
-scale = Vector2(0.628001, 1.05146)
-texture = ExtResource("2_j55nu")
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+position = Vector2(18, 448.75)
+scale = Vector2(0.753247, 1.1461)
+texture = ExtResource("4_ww44h")
 
 [node name="Left" type="Sprite2D" parent="Background"]
+position = Vector2(-430, 400)
+scale = Vector2(1.17219, 1.332)
+texture = ExtResource("5_o058g")
 
 [node name="Receiver" type="Area2D" parent="Background/Left"]
 script = SubResource("GDScript_dq0o0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Left/Receiver"]
-position = Vector2(-423, 392)
-rotation = -1.5708
-scale = Vector2(0.1, 0.1)
-shape = SubResource("CircleShape2D_qr33a")
+position = Vector2(-18.8243, 2.11707)
+rotation = 1.54113
+scale = Vector2(0.2, 0.2)
+shape = SubResource("CapsuleShape2D_dbgpb")
 
 [node name="Center" type="Sprite2D" parent="Background"]
+position = Vector2(-50, 300)
+texture = ExtResource("6_6t2a3")
 
 [node name="Receiver" type="Area2D" parent="Background/Center"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Center/Receiver"]
-position = Vector2(-37, 293)
+position = Vector2(8, -5)
 scale = Vector2(0.1, 0.1)
-shape = SubResource("CircleShape2D_ac14a")
+shape = SubResource("CapsuleShape2D_08box")
 
 [node name="Right" type="Sprite2D" parent="Background"]
+position = Vector2(450, 375)
+rotation = -0.179769
+texture = ExtResource("7_gi5ii")
 
 [node name="Receiver" type="Area2D" parent="Background/Right"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Right/Receiver"]
-position = Vector2(432, 387)
+position = Vector2(-3, 3)
 rotation = 1.5708
 scale = Vector2(0.1, 0.1)
-shape = SubResource("CircleShape2D_opegf")
+shape = SubResource("CapsuleShape2D_4lbrh")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="CommonGame" parent="." instance=ExtResource("4_fvj5b")]
 
 [node name="BlackoutScreen" parent="CommonGame" index="0"]
+visible = false
 position = Vector2(0, 0)
 
 [node name="Timer" parent="CommonGame" index="1"]

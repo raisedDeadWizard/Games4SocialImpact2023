@@ -18,6 +18,7 @@ config/icon="res://src/assets/icon.svg"
 [autoload]
 
 Global="*res://src/scripts/global.gd"
+Music="*res://src/scenes/music.tscn"
 
 [display]
 
@@ -34,7 +35,7 @@ enabled=PackedStringArray("res://addons/coi_serviceworker/plugin.cfg")
 
 [physics]
 
-common/physics_ticks_per_second=100
+common/physics_ticks_per_second=240
 
 [rendering]
 

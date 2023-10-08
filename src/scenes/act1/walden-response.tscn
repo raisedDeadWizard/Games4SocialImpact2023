@@ -1,8 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://br7mly6fyqqvw"]
+[gd_scene load_steps=7 format=3 uid="uid://br7mly6fyqqvw"]
 
-[ext_resource type="Script" path="res://src/scriptswalden-response.gd" id="1_40hbe"]
+[ext_resource type="Script" path="res://src/scripts/walden-response.gd" id="1_kviwf"]
+[ext_resource type="PackedScene" uid="uid://cuqkdexxeubg" path="res://src/scenes/Background.tscn" id="2_2d3uf"]
+[ext_resource type="PackedScene" uid="uid://b1xarr44dkk5x" path="res://src/scenes/Textbox.tscn" id="2_waqar"]
+[ext_resource type="PackedScene" path="res://src/scenes/pre-industry.tscn" id="3_vqm5m"]
+[ext_resource type="PackedScene" uid="uid://bhoorcr64nkl7" path="res://src/scenes/Tree.tscn" id="4_73pqe"]
+[ext_resource type="PackedScene" uid="uid://7dih603j2tvk" path="res://src/scenes/characters/pre-industrial/walden/walden_char.tscn" id="6_iqlvr"]
 
 [node name="walden-response" type="Node2D"]
-script = ExtResource("1_40hbe")
+script = ExtResource("1_kviwf")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background" parent="." instance=ExtResource("2_2d3uf")]
+
+[node name="pre-industry" parent="Background" instance=ExtResource("3_vqm5m")]
+
+[node name="Tree" parent="Background" instance=ExtResource("4_73pqe")]
+
+[node name="walden_char" parent="Background" instance=ExtResource("6_iqlvr")]
+
+[node name="textbox" parent="Background" instance=ExtResource("2_waqar")]
+position = Vector2(-304, 410)

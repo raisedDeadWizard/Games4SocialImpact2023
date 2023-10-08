@@ -1,31 +1,51 @@
 extends Node2D
 
+var dialogList = Global.akleda_dialog
+var text_queue = []
+var queue_ind = 0
 
-var akelda = preload("res://src/scenes/characters/pre-industrial/akelda/akelda_char.tscn")
-var town = preload("res://src/scenes/pre-industry.tscn")
-var bkgd = preload("res://src/scenes/Background.tscn")
-var tree = preload("res://src/scenes/Tree.tscn")
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	var treeNode = tree.instantiate()
-	treeNode.set_meta("Health", 1)
-	var townNode = town.instantiate()
-	var bkgdNode = bkgd.instantiate()
-	var akeldaNode = akelda.instantiate()
-	
-	bkgdNode.add_child(townNode)
-	bkgdNode.add_child(treeNode)
-	bkgdNode.add_child(akeldaNode)
-	add_child(bkgdNode)
+	Global.is_done_talking = false
+	text_queue.append(dialogList[1])
+	var health = Global.tree_health
+	if Global.totalScore >= Global.act_thresholds[0]:
+		text_queue.append(dialogList[2])
+		text_queue.append(dialogList[3])
+		Global.tree_health = max(health - 1, 0)
+	else:
+		text_queue.append(dialogList[4])
+		text_queue.append(dialogList[5])
+		Global.tree_health = min(health + 1, 3)
+	$Background/Tree._updateHealth()
+	$Background/textbox/Label.visible_characters = 0
+	$Background/textbox/Label2.text = "Akelda"
+	$Background/textbox/Label.text = text_queue[0]
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if $Background/textbox/Label.visible_characters == $Background/textbox/Label.text.length():
+		Global.is_done_talking = true
 	
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		print(event)
-		if event.is_pressed():
-			get_tree().change_scene_to_file("res://src/scenes/main.tscn")
+		if event.is_pressed() && Global.is_done_talking:
+
+			if queue_ind < text_queue.size() - 1:
+
+				_nextDialog()
+			else:
+				get_tree().change_scene_to_file("res://src/scenes/main.tscn")
+
+func _nextDialog():
+	queue_ind += 1
+	Global.is_done_talking = false
+	if queue_ind % 2 == 1:
+		$Background/textbox/Label2.text = "You"
+	else:
+		$Background/textbox/Label2.text = "Akelda"
+	$Background/textbox/Label.visible_characters = 0
+	$Background/textbox/Label.text = text_queue[queue_ind]
+	

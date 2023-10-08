@@ -12,5 +12,4 @@ position = Vector2(960, 540)
 texture = ExtResource("2_lgc0q")
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(-54, 0)
 texture = ExtResource("3_do1ki")

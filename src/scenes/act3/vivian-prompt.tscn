@@ -1,0 +1,24 @@
+[gd_scene load_steps=7 format=3 uid="uid://cdi7gl36wl5r8"]
+
+[ext_resource type="Script" path="res://src/scripts/vivian-prompt.gd" id="1_5cju1"]
+[ext_resource type="PackedScene" uid="uid://b1xarr44dkk5x" path="res://src/scenes/Textbox.tscn" id="2_exud6"]
+[ext_resource type="PackedScene" uid="uid://cuqkdexxeubg" path="res://src/scenes/Background.tscn" id="2_gqeg3"]
+[ext_resource type="PackedScene" path="res://src/scenes/post-industry.tscn" id="3_dqbu6"]
+[ext_resource type="PackedScene" uid="uid://bhoorcr64nkl7" path="res://src/scenes/Tree.tscn" id="4_7k8dc"]
+[ext_resource type="PackedScene" uid="uid://c7rcgj8daecsi" path="res://src/scenes/characters/post-industrial/vivian/vivian_char.tscn" id="6_36ywl"]
+
+[node name="vivian-prompt" type="Node2D"]
+script = ExtResource("1_5cju1")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background" parent="." instance=ExtResource("2_gqeg3")]
+
+[node name="post-industry" parent="Background" instance=ExtResource("3_dqbu6")]
+
+[node name="Tree" parent="Background" instance=ExtResource("4_7k8dc")]
+
+[node name="textbox" parent="Background" instance=ExtResource("2_exud6")]
+position = Vector2(-304, 410)
+
+[node name="vivian_char" parent="Background" instance=ExtResource("6_36ywl")]

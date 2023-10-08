@@ -48,6 +48,7 @@ func _countdown():
 	await get_tree().create_timer(0.75).timeout
 	$Countdown.text = "GO!"
 	Global.is_minigame_ready = true
+	TIMER_FINISH = $Timer.get_meta("TimerDuration")
 	await get_tree().create_timer(0.75).timeout
 	$Countdown.hide()
 	timerToggle = true
@@ -59,6 +60,7 @@ func _endGame():
 	Global.is_minigame_ready = false
 	$BlackoutScreen.show()
 	$Score.text = "Score:\n" + str(self.get_meta("Score"))
+	Global.totalScore = self.get_meta("Score")
 	$Score.show()
 	$ConfirmButton.pressed.disconnect(_startGame)
 	$ConfirmButton.pressed.connect(_crash)

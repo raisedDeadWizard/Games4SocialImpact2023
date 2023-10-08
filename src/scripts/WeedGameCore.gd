@@ -10,9 +10,10 @@ var timer = 0
 var ind = 0
 var rng = RandomNumberGenerator.new()
 var plamt = preload("res://src/scenes/plamt.tscn")
+var time = Global.weed_timer
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$CommonGame.set_meta("Dest",2)
+	$CommonGame/Timer.set_meta("TimerDuration", Global.weed_timer)
 	for x in range(5):
 		matrix.append([])
 		matrix[x]=[]        
@@ -43,9 +44,9 @@ func _unhandled_input(event):
 			_updateGloveGUI()
 
 func _updateGloveGUI():
-	$SelectedTool/Green.modulate.a = 0.5
-	$SelectedTool/Yellow.modulate.a = 0.5
-	$SelectedTool/Red.modulate.a = 0.5
+	$SelectedTool/Green.modulate.a = 0.3
+	$SelectedTool/Yellow.modulate.a = 0.3
+	$SelectedTool/Red.modulate.a = 0.3
 
 	match self.get_meta("SelectedTool"):
 		0:
@@ -56,12 +57,13 @@ func _updateGloveGUI():
 			$SelectedTool/Red.modulate.a = 1
 
 func _generateTimes():
+	var temptime = time - 5
 	for x in range(11):
-		times.append(rng.randf_range(0.00, 15.00))
+		times.append(rng.randf_range(0.00, float(temptime)/2.00))
 	for x in range(11):
-		times.append(rng.randf_range(15.00, 30.00))
+		times.append(rng.randf_range(float(temptime)/2.00, float(temptime)))
 	for x in range(8):
-		times.append(4 * x)
+		times.append(float(temptime) * float(x)/8.00)
 	times.sort()
 
 func _spawnPlant():
@@ -82,7 +84,6 @@ func _spawnPlant():
 			$Weeds.add_child(newplamt)
 			newplamt.connect("clickButt", clickPant)
 			return
-	print("GAME OVER")
 
 func clickPant(object):
 	var x = object.get_meta("x")
