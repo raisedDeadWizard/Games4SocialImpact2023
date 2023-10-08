@@ -32,7 +32,7 @@ radius = 401.996
 [node name="Garden" type="Node2D"]
 script = ExtResource("1_tgxat")
 metadata/maxDrops = 0
-metadata/speed = 0
+metadata/Dest = 0
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_gwxse")

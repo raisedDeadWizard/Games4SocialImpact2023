@@ -66,4 +66,7 @@ func _endGame():
 	
 	
 func _crash():
-	print("IMPLEMENT GOING BACK TO DIALOG NOW DOOFUS")
+	var dest = get_meta("Dest")
+	print("IMPLEMENT GOING BACK TO DIALOG NOW DOOFUS ", dest)
+	if dest == 1:
+		get_tree().change_scene_to_file("res://src/scenes/weed.tscn")

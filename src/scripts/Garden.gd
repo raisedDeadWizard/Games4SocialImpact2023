@@ -12,6 +12,7 @@ var totalScore = 0
 var scoreIncrement = 10
 var nextSpawn = 0
 var speed = 0
+var dest
 
 var rng = RandomNumberGenerator.new()
 var dropletNode = preload("res://src/scenes/Droplet.tscn")
@@ -19,10 +20,11 @@ var dropletNode = preload("res://src/scenes/Droplet.tscn")
 func _ready():
 	timer = 0 # Replace with function body.
 	offset = 1
-	var numOfDroplets = get_meta("maxDrops")
-	speed = get_meta("speed")
+	numOfDroplets = get_meta("maxDrops")
 	print(numOfDroplets)
-	print(speed)
+	dest = get_meta("Dest")
+	print("Garden: ", dest)
+	$CommonGame.set_meta("Dest", dest)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
