@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://camhh28plki7b"]
+[gd_scene load_steps=12 format=3 uid="uid://camhh28plki7b"]
 
 [ext_resource type="Texture2D" uid="uid://bkhnp8qmpnj6s" path="res://src/assets/background/baseBackground.png" id="1_gwxse"]
 [ext_resource type="Script" path="res://src/scripts/Garden.gd" id="1_tgxat"]
-[ext_resource type="Texture2D" uid="uid://g6v5bl58mv1y" path="res://src/assets/waterMinigame/plant.png" id="2_j55nu"]
 [ext_resource type="PackedScene" uid="uid://dt4n1uac0dvtv" path="res://src/scenes/common_game.tscn" id="4_fvj5b"]
 [ext_resource type="Texture2D" uid="uid://cl0a0itew3twp" path="res://src/assets/waterMinigame/stem.png" id="4_ww44h"]
 [ext_resource type="Texture2D" uid="uid://33dkq8h2hl1w" path="res://src/assets/waterMinigame/leftLeaf.png" id="5_o058g"]
@@ -44,12 +43,6 @@ metadata/Dest = 0
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(54, 4)
 texture = ExtResource("1_gwxse")
-
-[node name="Plant" type="Sprite2D" parent="Background"]
-visible = false
-position = Vector2(13.125, 382.781)
-scale = Vector2(0.628001, 1.05146)
-texture = ExtResource("2_j55nu")
 
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
 position = Vector2(18, 448.75)

@@ -94,6 +94,9 @@ func _checkPlayerInput(dir):
 		
 		sprite.set_visibility_layer_bit(0, false)
 		popped.set_visibility_layer_bit(1, true)
+		
+	
+		
 		# fade opacity of popped
 		
 		#drop.hide()
