@@ -82,7 +82,6 @@ func _spawnPlant():
 			$Weeds.add_child(newplamt)
 			newplamt.connect("clickButt", clickPant)
 			return
-	print("GAME OVER")
 
 func clickPant(object):
 	var x = object.get_meta("x")

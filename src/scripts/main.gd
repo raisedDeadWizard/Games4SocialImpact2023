@@ -7,7 +7,6 @@ func _ready():
 	Global.scene_index += 1
 	if Global.scene_index == 4:
 		Global.max_drops = 25
-	print("index: ",Global.scene_index)
 	get_tree().change_scene_to_file(Global.scene_array[Global.scene_index])
 
 

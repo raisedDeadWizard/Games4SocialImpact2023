@@ -31,7 +31,6 @@ func _process(delta):
 	
 func _unhandled_input(event):
 	if event is InputEventMouseButton and !alreadyPressed:
-		print(event)
 		if event.is_pressed():
 			alreadyPressed = true
 			waldenNode.set_visibility_layer_bit(0, false)
