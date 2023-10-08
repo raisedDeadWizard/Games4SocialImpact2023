@@ -10,7 +10,7 @@ func _process(delta):
 	pass
 	
 func _updateHealth():
-	var health = get_meta("Health")
+	var health = Global.tree_health
 	$Wilting.hide()
 	$Healthy.hide()
 	$Dying.hide()

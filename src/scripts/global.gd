@@ -7,6 +7,8 @@ var highest_book = 1000
 var max_drops = 0
 var water_timer = 0
 
+var tree_health = 0
+
 var book_timer = 0
 var weed_timer = 0
 
