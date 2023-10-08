@@ -40,5 +40,5 @@ func _unhandled_input(event):
 			gardenNode.set_meta("maxDrops", 25)
 			gardenNode.set_meta("Dest", 1)
 			bkgdNode.add_child(gardenNode)
-			#get_tree().change_scene_to_file("res://src/scenes/Garden.tscn")
+			get_tree().change_scene_to_file("res://src/scenes/main.tscn")
 

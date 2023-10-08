@@ -66,17 +66,4 @@ func _endGame():
 	
 	
 func _crash():
-	var dest = get_meta("Dest")
-	print("IMPLEMENT GOING BACK TO DIALOG NOW DOOFUS ", dest)
-	if dest == 1:
-		Global.totalScoreCurrAct += self.get_meta("Score")
-		get_tree().change_scene_to_file("res://src/scenes/weed.tscn")
-	if dest == 2:
-		Global.totalScoreCurrAct += self.get_meta("Score")
-		get_tree().change_scene_to_file("res://src/scenes/book_stack.tscn")
-	if dest == 3:
-		Global.totalScoreCurrAct += self.get_meta("Score")
-		print(Global.totalScoreCurrAct)
-		Global.totalScore += totalScoreCurrAct
-		Global.totalScoreCurrAct = 0
-		get_tree().change_scene_to_file("res://src/scenes/pre-industrial/akleda-response.tscn")
+	get_tree().change_scene_to_file("res://src/scenes/main.tscn")
