@@ -1,4 +1,6 @@
+
 [gd_scene load_steps=3 format=3 uid="uid://dgbsyqblhwi0u"]
+
 
 [ext_resource type="Script" path="res://src/scripts/book.gd" id="1_7fx2w"]
 [ext_resource type="Texture2D" uid="uid://cv8jmad3be4t3" path="res://src/assets/book/book.png" id="2_kk7sr"]
