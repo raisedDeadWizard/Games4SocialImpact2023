@@ -1,20 +1,19 @@
 extends Node2D
 
 
-var book = [
-	"Test1",
-	"Test2",
-	"Test3",
-	"Test4",
-	"Test5",
-	"Test6",
-	"Test7"
-]
+var book 
 
 var ind = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	book = [
+	get_meta("Page1"),
+	get_meta("Page2"),
+	get_meta("Page3"),
+	get_meta("Page4")
+	]
 	$LeftButton.pressed.connect(_pageDown)
 	$RightButton.pressed.connect(_pageUp)
 	_updateText()
