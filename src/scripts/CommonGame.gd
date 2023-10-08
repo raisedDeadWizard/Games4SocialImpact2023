@@ -67,3 +67,4 @@ func _endGame():
 	
 func _crash():
 	get_tree().change_scene_to_file("res://src/scenes/main.tscn")
+

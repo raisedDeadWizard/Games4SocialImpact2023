@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bahbgw6tmcbk5"]
+
+[ext_resource type="Texture2D" uid="uid://cja1jvax5pft1" path="res://src/assets/ui/textbox.png" id="1_q3gd3"]
+
+[node name="Textbox" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(656, 950)
+texture = ExtResource("1_q3gd3")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+anchors_preset = -1
+anchor_left = 0.079
+anchor_top = 0.293
+anchor_right = 0.906
+anchor_bottom = 0.698
+offset_left = -675.436
+offset_top = -147.976
+offset_right = -617.304
+offset_bottom = -88.936
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "INSERT BLANK TEXT"
