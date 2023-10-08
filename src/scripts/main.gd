@@ -22,7 +22,7 @@ func _ready():
 			Global.weed_timer = 20
 			Global.book_timer = 7
 		
-  if Global.scene_index == 39:
+	if Global.scene_index == 39:
 		Global.scene_index = -1
 		get_tree().change_scene_to_file("res://src/scenes/main.tscn")
 	print("index: ",Global.scene_index)
