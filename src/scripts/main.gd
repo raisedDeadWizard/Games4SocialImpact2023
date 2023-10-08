@@ -5,9 +5,24 @@ extends Node
 func _ready():
 	
 	Global.scene_index += 1
-	if Global.scene_index == 4:
-		Global.max_drops = 25
-	elif Global.scene_index == 39:
+	match Global.scene_index:
+		0:
+			print("UPDATED GLOBALS")
+			Global.max_drops = 25
+			Global.weed_timer = 35
+			Global.book_timer = 15
+		13:
+			print("UPDATED GLOBALS")
+			Global.max_drops = 30
+			Global.weed_timer = 25
+			Global.book_timer = 10
+		25:
+			print("UPDATED GLOBALS")
+			Global.max_drops = 35
+			Global.weed_timer = 20
+			Global.book_timer = 7
+		
+  if Global.scene_index == 39:
 		Global.scene_index = -1
 		get_tree().change_scene_to_file("res://src/scenes/main.tscn")
 	print("index: ",Global.scene_index)

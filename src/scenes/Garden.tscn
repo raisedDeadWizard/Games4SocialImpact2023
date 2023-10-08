@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bkhnp8qmpnj6s" path="res://src/assets/background/baseBackground.png" id="1_gwxse"]
 [ext_resource type="Script" path="res://src/scripts/Garden.gd" id="1_tgxat"]
 [ext_resource type="Texture2D" uid="uid://g6v5bl58mv1y" path="res://src/assets/waterMinigame/plant.png" id="2_j55nu"]
-[ext_resource type="PackedScene" uid="uid://2v6mkonjqyk3" path="res://src/scenes/common_game.tscn" id="4_fvj5b"]
+[ext_resource type="PackedScene" uid="uid://dt4n1uac0dvtv" path="res://src/scenes/common_game.tscn" id="4_fvj5b"]
 
 [sub_resource type="GDScript" id="GDScript_dq0o0"]
 script/source = "extends Area2D

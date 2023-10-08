@@ -6,11 +6,10 @@ var book = preload("res://src/scenes/stackable.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$CommonGame.get_node("Timer").set_meta("Timer Duration", 15)
+	$CommonGame/Timer.set_meta("Timer Duration", Global.book_timer)
 	_create_books()
 	for node in $pickable.get_children():
 		node.connect("clicked", _on_pickable_clicked)
-	$CommonGame.set_meta("Dest", 3)
 	
 func _on_pickable_clicked(object):
 	if !held_object:
