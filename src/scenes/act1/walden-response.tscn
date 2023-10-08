@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://br7mly6fyqqvw"]
 
 [ext_resource type="Script" path="res://src/scripts/walden-response.gd" id="1_kviwf"]
-[ext_resource type="PackedScene" uid="uid://cuqkdexxeubg" path="res://src/scenes/Background.tscn" id="2_2d3uf"]
+[ext_resource type="PackedScene" path="res://src/scenes/Background.tscn" id="2_2d3uf"]
 [ext_resource type="PackedScene" uid="uid://b1xarr44dkk5x" path="res://src/scenes/Textbox.tscn" id="2_waqar"]
 [ext_resource type="PackedScene" path="res://src/scenes/pre-industry.tscn" id="3_vqm5m"]
 [ext_resource type="PackedScene" uid="uid://bhoorcr64nkl7" path="res://src/scenes/Tree.tscn" id="4_73pqe"]
