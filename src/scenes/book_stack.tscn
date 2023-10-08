@@ -48,6 +48,10 @@ offset_left = 137.0
 offset_top = -4.0
 offset_right = 1037.0
 offset_bottom = 596.0
+text = "Click and drag to stack the 
+books as high as you 
+can within the time limit!
+"
 
 [node name="ConfirmButton" parent="CommonGame" index="3"]
 offset_left = 462.0
