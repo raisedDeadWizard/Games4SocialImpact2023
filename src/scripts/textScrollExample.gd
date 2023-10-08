@@ -14,7 +14,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	timer += delta
-	print(timer)
 	if(timer >= TEXT_SPEED):
 		timer -= TEXT_SPEED
 		visible_characters += 1

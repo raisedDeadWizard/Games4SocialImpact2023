@@ -24,6 +24,5 @@ func _process(delta):
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
-		print(event)
 		if event.is_pressed():
 			get_tree().change_scene_to_file("res://src/scenes/main.tscn")
