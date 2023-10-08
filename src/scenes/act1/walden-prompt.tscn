@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcioecknmlc0c"]
+[gd_scene load_steps=3 format=3 uid="uid://dcioecknmlc0c"]
 
 [ext_resource type="Script" path="res://src/scripts/walden-prompt.gd" id="1_a5hls"]
+[ext_resource type="PackedScene" uid="uid://b1xarr44dkk5x" path="res://src/scenes/Textbox.tscn" id="2_q5smj"]
 
 [node name="walden-prompt" type="Node2D"]
 script = ExtResource("1_a5hls")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="textbox" parent="." instance=ExtResource("2_q5smj")]
+position = Vector2(-291, 398)
