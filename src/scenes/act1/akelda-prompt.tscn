@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://dbuyp3dw8m57k"]
 
-[ext_resource type="Script" path="res://src/scripts/akelda-prompt.gd" id="1_0dfhj"]
+[ext_resource type="Script" path="res://src/scripts/akelda-prompt.gd" id="1_quggh"]
 
 [node name="akelda-prompt" type="Node2D"]
-script = ExtResource("1_0dfhj")
+script = ExtResource("1_quggh")
 
 [node name="Camera2D" type="Camera2D" parent="."]
