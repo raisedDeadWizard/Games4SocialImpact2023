@@ -1,12 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjjexq5riy7ms"]
+[gd_scene load_steps=7 format=3 uid="uid://cjjexq5riy7ms"]
 
 [ext_resource type="Script" path="res://src/scripts/riley-response.gd" id="1_xs03f"]
+[ext_resource type="PackedScene" uid="uid://cuqkdexxeubg" path="res://src/scenes/Background.tscn" id="2_jj6k3"]
 [ext_resource type="PackedScene" uid="uid://b1xarr44dkk5x" path="res://src/scenes/Textbox.tscn" id="2_s8us2"]
+[ext_resource type="PackedScene" path="res://src/scenes/post-industry.tscn" id="3_tda33"]
+[ext_resource type="PackedScene" uid="uid://bhoorcr64nkl7" path="res://src/scenes/Tree.tscn" id="4_hbhl7"]
+[ext_resource type="PackedScene" uid="uid://dyio3g8h0h0wu" path="res://src/scenes/characters/post-industrial/riley/riley_char.tscn" id="6_p8by8"]
 
 [node name="riley-response" type="Node2D"]
 script = ExtResource("1_xs03f")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="textbox" parent="." instance=ExtResource("2_s8us2")]
-position = Vector2(-291, 398)
+[node name="Background" parent="." instance=ExtResource("2_jj6k3")]
+
+[node name="post-industry" parent="Background" instance=ExtResource("3_tda33")]
+
+[node name="Tree" parent="Background" instance=ExtResource("4_hbhl7")]
+
+[node name="textbox" parent="Background" instance=ExtResource("2_s8us2")]
+position = Vector2(-304, 410)
+
+[node name="riley_char" parent="Background" instance=ExtResource("6_p8by8")]

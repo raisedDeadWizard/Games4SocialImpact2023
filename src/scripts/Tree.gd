@@ -4,9 +4,9 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var health = get_meta("Health")
-	if health == 1:
-		$Wilting.hide()
 	if health == 0:
+		$Wilting.hide()
+	if health == 1:
 		$Healthy.hide()
 
 

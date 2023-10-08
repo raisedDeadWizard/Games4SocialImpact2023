@@ -1,12 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://ps2qpopm8qhn"]
+[gd_scene load_steps=7 format=3 uid="uid://ps2qpopm8qhn"]
 
 [ext_resource type="Script" path="res://src/scripts/brendan-prompt.gd" id="1_nvcio"]
 [ext_resource type="PackedScene" uid="uid://b1xarr44dkk5x" path="res://src/scenes/Textbox.tscn" id="2_0qjrc"]
+[ext_resource type="PackedScene" uid="uid://cuqkdexxeubg" path="res://src/scenes/Background.tscn" id="2_wyxa3"]
+[ext_resource type="PackedScene" path="res://src/scenes/post-industry.tscn" id="3_tp5ep"]
+[ext_resource type="PackedScene" uid="uid://bhoorcr64nkl7" path="res://src/scenes/Tree.tscn" id="4_h7vkq"]
+[ext_resource type="PackedScene" uid="uid://cw4lwqfsq67jm" path="res://src/scenes/characters/post-industrial/brendan/brendan_char.tscn" id="6_x32l0"]
 
 [node name="brendan-prompt" type="Node2D"]
 script = ExtResource("1_nvcio")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="textbox" parent="." instance=ExtResource("2_0qjrc")]
-position = Vector2(-291, 398)
+[node name="Background" parent="." instance=ExtResource("2_wyxa3")]
+
+[node name="post-industry" parent="Background" instance=ExtResource("3_tp5ep")]
+
+[node name="Tree" parent="Background" instance=ExtResource("4_h7vkq")]
+
+[node name="textbox" parent="Background" instance=ExtResource("2_0qjrc")]
+position = Vector2(-304, 410)
+
+[node name="brendan_char" parent="Background" instance=ExtResource("6_x32l0")]
