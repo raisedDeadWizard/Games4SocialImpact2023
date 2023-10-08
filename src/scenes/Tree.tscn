@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhoorcr64nkl7"]
+[gd_scene load_steps=5 format=3 uid="uid://bhoorcr64nkl7"]
 
 [ext_resource type="Script" path="res://src/scripts/Tree.gd" id="1_v0eja"]
 [ext_resource type="Texture2D" uid="uid://c8p8spxbby0g4" path="res://src/assets/background/healthyTree.png" id="2_j08rb"]
 [ext_resource type="Texture2D" uid="uid://doghjhp3s3vgs" path="res://src/assets/background/dyingTree.png" id="3_aw1tk"]
+[ext_resource type="Texture2D" uid="uid://dkp2kfe1iywnd" path="res://src/assets/background/deadTree.png" id="4_tjmkn"]
 
 [node name="Tree" type="Node2D"]
 script = ExtResource("1_v0eja")
@@ -14,3 +15,7 @@ texture = ExtResource("2_j08rb")
 [node name="Wilting" type="Sprite2D" parent="."]
 position = Vector2(-27, 0)
 texture = ExtResource("3_aw1tk")
+
+[node name="Dying" type="Sprite2D" parent="."]
+position = Vector2(-27, 0)
+texture = ExtResource("4_tjmkn")
