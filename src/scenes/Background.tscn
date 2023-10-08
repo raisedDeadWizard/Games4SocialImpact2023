@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://cuqkdexxeubg"]
+
+[ext_resource type="Script" path="res://src/scripts/Background.gd" id="1_0ylsb"]
+[ext_resource type="Texture2D" uid="uid://bkhnp8qmpnj6s" path="res://src/assets/background/baseBackground.png" id="2_31d34"]
+[ext_resource type="Texture2D" uid="uid://db44gio4mt21e" path="res://src/assets/background/buildings1.png" id="3_oe15a"]
+[ext_resource type="Texture2D" uid="uid://bcivsgsqioosp" path="res://src/assets/background/buildings3.png" id="4_scvnr"]
+[ext_resource type="Texture2D" uid="uid://berp5rxqt4tav" path="res://src/assets/background/buildings2.png" id="5_simmh"]
+
+[node name="Background" type="Node2D"]
+script = ExtResource("1_0ylsb")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_31d34")
+metadata/Age = 0
+
+[node name="Pre" type="Sprite2D" parent="Sprite"]
+texture = ExtResource("3_oe15a")
+
+[node name="Post" type="Sprite2D" parent="Sprite"]
+texture = ExtResource("4_scvnr")
+
+[node name="Industry" type="Sprite2D" parent="Sprite"]
+texture = ExtResource("5_simmh")
