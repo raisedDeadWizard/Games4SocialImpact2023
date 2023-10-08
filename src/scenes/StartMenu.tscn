@@ -12,7 +12,7 @@ position = Vector2(960, 540)
 texture = ExtResource("2_46cvv")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(910, 540)
+position = Vector2(960, 540)
 texture = ExtResource("3_siod8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
