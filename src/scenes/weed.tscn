@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bdxc218f8wk0c"]
 
 [ext_resource type="Script" path="res://src/scripts/WeedGameCore.gd" id="1_4v3x6"]
-[ext_resource type="Texture2D" uid="uid://d4eus3hd42fpf" path="res://src/assets/gardenMinigame/garden_topView.png" id="3_ospfc"]
-[ext_resource type="PackedScene" uid="uid://dt4n1uac0dvtv" path="res://src/scenes/common_game.tscn" id="3_si1m5"]
+[ext_resource type="Texture2D" uid="uid://ooqeyhiqo252" path="res://src/assets/gardenMinigame/garden_topView.png" id="3_ospfc"]
+[ext_resource type="PackedScene" uid="uid://dt4n1uac0dvtv" path="res://src/scenes/CommonGame.tscn" id="3_si1m5"]
 [ext_resource type="Texture2D" uid="uid://ckld6lsf2181e" path="res://src/assets/gardenMinigame/glove.png" id="4_6boe2"]
 [ext_resource type="Texture2D" uid="uid://exminsvxq84j" path="res://src/assets/gardenMinigame/pruning_shears.png" id="5_xi140"]
 [ext_resource type="Texture2D" uid="uid://cvm4xbc6tyfqc" path="res://src/assets/gardenMinigame/watering_can.png" id="6_abvmh"]

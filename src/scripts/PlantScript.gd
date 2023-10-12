@@ -21,10 +21,6 @@ func _ready():
 	
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func _buttPush():
 	if(get_parent().get_parent().get_meta("SelectedTool") == index):
 		emit_signal("clickButt", self)

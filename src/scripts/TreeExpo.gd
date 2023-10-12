@@ -9,10 +9,6 @@ func _ready():
 	book_instance.set_meta("Page2", "You will need to improve the lives of crucial villagers in order to keep the tree alive and make necessary changes in the history of the village. ")
 	self.add_child(book_instance)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 	
 func _unhandled_input(event):
 	if event is InputEventMouseButton:

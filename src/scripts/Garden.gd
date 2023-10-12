@@ -45,7 +45,7 @@ func _unhandled_input(event):
 		if dir:
 			_checkPlayerInput(dir)
 	
-func _spawnDroplet(delta):
+func _spawnDroplet(_delta):
 	if currNumOfDroplets < numOfDroplets:
 		if timer >= nextSpawn:
 			var r = rng.randi_range(1, 3)

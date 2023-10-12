@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://csx3higce2v1h"]
+
+[ext_resource type="Script" path="res://src/scripts/CommonDialog.gd" id="1_nl5om"]
+[ext_resource type="Texture2D" uid="uid://bkhnp8qmpnj6s" path="res://src/assets/background/baseBackground.png" id="2_826o4"]
+[ext_resource type="PackedScene" uid="uid://bhoorcr64nkl7" path="res://src/scenes/Tree.tscn" id="4_cq0rs"]
+[ext_resource type="PackedScene" uid="uid://b1xarr44dkk5x" path="res://src/scenes/Textbox.tscn" id="5_lhoo5"]
+
+[node name="CommonDialog" type="Node2D"]
+position = Vector2(960, 540)
+script = ExtResource("1_nl5om")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="PlainBG" type="Sprite2D" parent="Background"]
+texture = ExtResource("2_826o4")
+metadata/Age = 0
+
+[node name="TownBG" type="Sprite2D" parent="Background"]
+
+[node name="Tree" parent="Background" instance=ExtResource("4_cq0rs")]
+
+[node name="textbox" parent="Background" instance=ExtResource("5_lhoo5")]
+position = Vector2(-304, 410)
+
+[node name="CharSprite" type="Sprite2D" parent="Background"]
+position = Vector2(500, 140)

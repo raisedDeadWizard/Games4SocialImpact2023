@@ -25,8 +25,9 @@ text = "Act III: Moschester"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
+offset_left = 110.0
 offset_top = 500.0
-offset_right = 1920.0
+offset_right = 1810.0
 offset_bottom = 974.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)

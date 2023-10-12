@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://df0vqqixgyvup"]
+
+[ext_resource type="Script" path="res://src/scripts/CommonBook.gd" id="1_04abn"]
+[ext_resource type="Texture2D" uid="uid://bkhnp8qmpnj6s" path="res://src/assets/background/baseBackground.png" id="2_wg6ll"]
+[ext_resource type="PackedScene" uid="uid://bhoorcr64nkl7" path="res://src/scenes/Tree.tscn" id="3_nmpqg"]
+[ext_resource type="PackedScene" uid="uid://dgbsyqblhwi0u" path="res://src/scenes/book.tscn" id="4_wog74"]
+
+[node name="PlayerExpo" type="Node2D"]
+script = ExtResource("1_04abn")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_wg6ll")
+
+[node name="Tree" parent="Background" instance=ExtResource("3_nmpqg")]
+
+[node name="Book" parent="." instance=ExtResource("4_wog74")]
+
+[editable path="Book"]

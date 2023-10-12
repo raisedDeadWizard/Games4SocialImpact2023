@@ -13,10 +13,6 @@ func _ready():
 	get_meta("Page2")
 	]
 	_updateText()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass	
 	
 	
 func _updateText():

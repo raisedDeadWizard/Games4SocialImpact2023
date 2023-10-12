@@ -22,7 +22,7 @@ const akleda_dialog : Array = [
 	"So I was collecting apples today, and I feel like I got less than I usually do. Do you know a way to get more apples?",
 	"What did you find out about?",
 	"If you want to get more apples, you should prune your trees in the early spring before the trees begin growing in the spring. This can be done by cutting off dead or diseased branches.",
-	"I’ll try that out next spring thanks!",
+	"I’ll try that out next spring! Thanks!",
 	"I didn’t find much but you can try pruning the branches before they start growing, and that should help.",
 	"Hmmm, alright, I’ll see how it goes."
 	]
@@ -101,70 +101,80 @@ var scene_array : Array = [
 	
 	# act 1
 	
-	"res://src/scenes/act1/walden-prompt.tscn",
+	"res://src/scenes/CommonDialog.tscn",
 	"res://src/scenes/Garden.tscn",
-	"res://src/scenes/act1/walden-research.tscn",
-	"res://src/scenes/act1/walden-response.tscn",
+	"res://src/scenes/CommonBook.tscn",
+	"res://src/scenes/CommonDialog.tscn",
 	
-	"res://src/scenes/act1/akelda-prompt.tscn",
-	"res://src/scenes/Weed.tscn",
-	"res://src/scenes/act1/akelda-research.tscn",
-	"res://src/scenes/act1/akelda-response.tscn",
+	"res://src/scenes/CommonDialog.tscn",
+	"res://src/scenes/weed.tscn",
+	"res://src/scenes/CommonBook.tscn",
+	"res://src/scenes/CommonDialog.tscn",
 	
-	"res://src/scenes/act1/eumann-prompt.tscn",
+	"res://src/scenes/CommonDialog.tscn",
 	"res://src/scenes/book_stack.tscn",
-	"res://src/scenes/act1/eumann-research.tscn",
-	"res://src/scenes/act1/eumann-response.tscn",
+	"res://src/scenes/CommonBook.tscn",
+	"res://src/scenes/CommonDialog.tscn",
 	
 	
 	
 	# act 2
 	"res://src/scenes/transitionact1to2.tscn",
 	
-	"res://src/scenes/act2/harold-prompt.tscn",
+	"res://src/scenes/CommonDialog.tscn",
 	"res://src/scenes/Garden.tscn",
-	"res://src/scenes/act2/harold-research.tscn",
-	"res://src/scenes/act2/harold-response.tscn",
+	"res://src/scenes/CommonBook.tscn",
+	"res://src/scenes/CommonDialog.tscn",
 	
-	"res://src/scenes/act2/gilbert-prompt.tscn",
-	"res://src/scenes/Weed.tscn",
-	"res://src/scenes/act2/gilbert-research.tscn",
-	"res://src/scenes/act2/gilbert-response.tscn",
+	"res://src/scenes/CommonDialog.tscn",
+	"res://src/scenes/weed.tscn",
+	"res://src/scenes/CommonBook.tscn",
+	"res://src/scenes/CommonDialog.tscn",
 	
-	"res://src/scenes/act2/judith-prompt.tscn",
+	"res://src/scenes/CommonDialog.tscn",
 	"res://src/scenes/book_stack.tscn",
-	"res://src/scenes/act2/judith-research.tscn",
-	"res://src/scenes/act2/judith-response.tscn",
+	"res://src/scenes/CommonBook.tscn",
+	"res://src/scenes/CommonDialog.tscn",
 	
 	# act 3
 	"res://src/scenes/transitionact2to3.tscn",
 	
-	"res://src/scenes/act3/riley-prompt.tscn",
+	"res://src/scenes/CommonDialog.tscn",
 	"res://src/scenes/Garden.tscn",
-	"res://src/scenes/act3/riley-research.tscn",
-	"res://src/scenes/act3/riley-response.tscn",
+	"res://src/scenes/CommonBook.tscn",
+	"res://src/scenes/CommonDialog.tscn",
 	
-	"res://src/scenes/act3/brendan-prompt.tscn",
-	"res://src/scenes/Weed.tscn",
-	"res://src/scenes/act3/brendan-research.tscn",
-	"res://src/scenes/act3/brendan-response.tscn",
+	"res://src/scenes/CommonDialog.tscn",
+	"res://src/scenes/weed.tscn",
+	"res://src/scenes/CommonBook.tscn",
+	"res://src/scenes/CommonDialog.tscn",
 	
-	"res://src/scenes/act3/vivian-prompt.tscn",
+	"res://src/scenes/CommonDialog.tscn",
 	"res://src/scenes/book_stack.tscn",
-	"res://src/scenes/act3/vivian-research.tscn",
-	"res://src/scenes/act3/vivian-response.tscn",
+	"res://src/scenes/CommonBook.tscn",
+	"res://src/scenes/CommonDialog.tscn",
 	
 	"res://src/scenes/TheEnd.tscn"
 ]
 var scene_index = -1
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass# Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+var research_index = 0
 	
+var sprites : Array = [
+	"res://src/assets/characters/walden.png",
+	"res://src/assets/characters/Akelda.png",
+	"res://src/assets/characters/Eumann.png",
+	
+	"res://src/assets/characters/harold.png",
+	"res://src/assets/characters/gilbert.png",
+	"res://src/assets/characters/judith.png",
+	
+	"res://src/assets/characters/Riley.png",
+	"res://src/assets/characters/Brendan.png",
+	"res://src/assets/characters/Vivian.png"
+]
+
+var bgsprites : Array = [
+	"res://src/assets/background/buildings1.png",
+	"res://src/assets/background/buildings2.png", 
+	"res://src/assets/background/buildings3.png"
+]

@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://7dih603j2tvk"]
-
-[ext_resource type="Texture2D" uid="uid://cp4owfqyyau0f" path="res://src/assets/characters/walden.png" id="1_g8wcc"]
-
-[node name="walden_char" type="Node2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(339, 171)
-texture = ExtResource("1_g8wcc")

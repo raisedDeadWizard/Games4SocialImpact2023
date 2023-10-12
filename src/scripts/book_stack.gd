@@ -6,7 +6,7 @@ var book = preload("res://src/scenes/stackable.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$CommonGame/Timer.set_meta("Timer Duration", Global.book_timer)
+	$CommonGame/Timer.set_meta("TimerDuration", Global.book_timer)
 	_create_books()
 	for node in $pickable.get_children():
 		node.connect("clicked", _on_pickable_clicked)
@@ -44,14 +44,14 @@ func _unhandled_input(event):
 			held_object = null
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if Global.is_minigame_ready:
 		_check_score()
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	pass
 
-func _input(event):
+func _input(_event):
 	pass
 
 
