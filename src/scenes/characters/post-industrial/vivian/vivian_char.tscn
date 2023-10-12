@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7rcgj8daecsi"]
-
-[ext_resource type="Texture2D" uid="uid://dqw53xxfl8lbt" path="res://src/assets/characters/Vivian.png" id="1_70mao"]
-
-[node name="vivian_char" type="Node2D"]
-
-[node name="CharSprite" type="Sprite2D" parent="."]
-position = Vector2(330, 110)
-texture = ExtResource("1_70mao")

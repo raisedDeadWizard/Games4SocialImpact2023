@@ -9,9 +9,6 @@ func _ready():
 	book_instance.set_meta("Page2", "and continue improving the lives of others, however if you fail the village and fail to protect the tree you lose your immortality. ")
 	self.add_child(book_instance)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 	
 func _unhandled_input(event):
 	if event is InputEventMouseButton:

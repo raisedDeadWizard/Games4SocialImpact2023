@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyio3g8h0h0wu"]
-
-[ext_resource type="Texture2D" uid="uid://0iof88yd6g1s" path="res://src/assets/characters/Riley.png" id="1_img3v"]
-
-[node name="riley_char" type="Node2D"]
-
-[node name="CharSprite" type="Sprite2D" parent="."]
-position = Vector2(330, 110)
-texture = ExtResource("1_img3v")

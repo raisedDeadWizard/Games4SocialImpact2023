@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0bq0yk50lm10"]
-
-[ext_resource type="Texture2D" uid="uid://dmb7bltvv78p6" path="res://src/assets/characters/judith.png" id="1_3f8ki"]
-
-[node name="judith_char" type="Node2D"]
-
-[node name="CharSprite" type="Sprite2D" parent="."]
-position = Vector2(330, 110)
-texture = ExtResource("1_3f8ki")

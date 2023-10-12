@@ -32,7 +32,7 @@ func _ready():
 	var num = rng.randi_range(0,11)
 	var x_pos = rng.randi_range(0,1000)
 	var shape = RectangleShape2D.new()
-	shape.set_size(Vector2(330,heights[num/3]))
+	shape.set_size(Vector2(330,heights[num/3.0]))
 	spriteNode.texture = sprites[num]
 	collisionNode.set_shape(shape)
 	self.global_position.x = x_pos
@@ -58,7 +58,7 @@ func _is_within_rect(m, rect):
 		return false
 	return true
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	#print(get_global_mouse_position())
 	if held:
 		global_transform.origin = get_global_mouse_position()

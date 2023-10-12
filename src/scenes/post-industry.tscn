@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5pow7d36q3k"]
-
-[ext_resource type="Texture2D" uid="uid://bcivsgsqioosp" path="res://src/assets/background/buildings3.png" id="1_nt3j6"]
-
-[node name="post-industry" type="Node2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_nt3j6")
